@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { routesData } from "./routesData";
+import { openRoute, routesData } from "./routesData";
 import NotFound from "../pages/404/NotFound";
 import { Suspense } from "react";
 import Layout from "../Layout/Layout";
@@ -9,6 +9,7 @@ const RoutesComponent = () => {
     <>
       <Suspense>
         <Routes>
+          <Route path="*" element={<NotFound />} />
           <Route element={<Layout />}>
             {routesData?.map((route, key) => {
               return (
@@ -16,7 +17,13 @@ const RoutesComponent = () => {
               );
             })}
           </Route>
-          <Route path="*" element={<NotFound />} />
+          <Route>
+            {openRoute?.map((route, key) => {
+              return (
+                <Route key={key} path={route?.path} element={route?.element} />
+              );
+            })}
+          </Route>
         </Routes>
       </Suspense>
     </>

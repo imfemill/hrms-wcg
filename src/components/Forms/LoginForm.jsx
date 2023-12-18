@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { EyeIcon, EyeOffIcon, ArrowRightIcon } from "@heroicons/react/outline";
+import { EyeIcon, EyeSlashIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
@@ -96,7 +96,7 @@ export default function LoginForm() {
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
-                      <EyeOffIcon className="h-5 w-5 text-wcg_blue hover:text-wcg_navy" />
+                      <EyeSlashIcon className="h-5 w-5 text-wcg_blue hover:text-wcg_navy" />
                     ) : (
                       <EyeIcon className="h-5 w-5 text-wcg_blue hover:text-wcg_navy" />
                     )}
@@ -118,9 +118,8 @@ export default function LoginForm() {
                         className={`box mr-2 flex h-5 w-5 items-center justify-center rounded-full border border-wcg_blue/25`}
                       >
                         <span
-                          className={`h-[10px] w-[10px] rounded-full ${
-                            isChecked ? "bg-wcg_blue" : "bg-wcg_lightblue"
-                          }`}
+                          className={`h-[10px] w-[10px] rounded-full ${isChecked ? "bg-wcg_blue" : "bg-wcg_lightblue"
+                            }`}
                         >
                           {" "}
                         </span>

@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-import { ArrowRightIcon } from "@heroicons/react/outline";
+import {
+  ArrowRightIcon,
+} from "@heroicons/react/20/solid";
 
 import { Form, Formik } from "formik";
 import { useNavigate } from "react-router-dom";
