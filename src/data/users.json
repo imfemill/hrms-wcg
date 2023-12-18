@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "age": 25,
+      "phone": "555-1234",
+      "city": "New York"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "age": 30,
+      "phone": "555-5678",
+      "city": "Los Angeles"
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "age": 22,
+      "phone": "555-9876",
+      "city": "Chicago"
+    },
+    {
+      "id": 4,
+      "name": "Alice Brown",
+      "age": 28,
+      "phone": "555-4321",
+      "city": "San Francisco"
+    },
+    {
+      "id": 5,
+      "name": "Charlie Wilson",
+      "age": 35,
+      "phone": "555-8765",
+      "city": "Seattle"
+    }
+  ]
+}

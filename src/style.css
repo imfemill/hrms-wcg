@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
+  font-family: Rubik, Helvetica, Arial, serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -16,4 +16,5 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
 }
