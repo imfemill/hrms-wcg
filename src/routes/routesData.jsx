@@ -13,6 +13,10 @@ export const routesData = [
     path: "/",
     element: <Dashboard />,
   },
+  //   ... as per need
+];
+
+export const openRoute = [
   {
     name: "signIn",
     path: "/signin",
