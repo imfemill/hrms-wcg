@@ -34,7 +34,11 @@ const Layout = () => {
   return (
     <>
       <div>
-        <Header setSidebarOpen={setSidebarOpen} classNames={classNames} />
+        <Header
+          setSidebarOpen={setSidebarOpen}
+          classNames={classNames}
+          userNavigation={userNavigation}
+        />
         <Sidebar
           setSidebarOpen={setSidebarOpen}
           sidebarOpen={sidebarOpen}
