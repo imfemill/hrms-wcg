@@ -16,7 +16,6 @@ export const routesData = [
   //   ... as per need
 ];
 
-
 export const openRoute = [
   {
     name: "signIn",
