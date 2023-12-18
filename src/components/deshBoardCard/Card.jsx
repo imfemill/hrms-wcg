@@ -2,7 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import { data } from "../../data/users.json";
 import ReactTable from "../reactTableComponent/ReactTable";
 import "./card.css";
-import { ChevronDownIcon } from "@heroicons/react/outline";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 const cardData = [
   { id: 1, value: 10, data: "Total Leave" },
   { id: 2, value: 6, data: "Total Approved Leave" },
