@@ -4,7 +4,7 @@ import { EyeIcon, EyeOffIcon, ArrowRightIcon } from "@heroicons/react/outline";
 
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 // Creating schema
 const schema = Yup.object({
@@ -30,7 +30,7 @@ export default function LoginForm() {
         onSubmit={async (values) => {
           console.log(values, { "keep logged in": isChecked });
           setLoading(!loading);
-          nav("/")
+          nav("/");
         }}
         validationSchema={schema}
       >
@@ -102,36 +102,41 @@ export default function LoginForm() {
                     )}
                   </span>
                 </div>
-
               </div>
 
               <div className="select-none mt-8 w-100 gap-2">
                 <div className="flex justify-between mb-5 text-xs font-medium text-wcg_navy">
-                  <label className='flex cursor-pointer select-none items-center hover:text-wcg_blue'>
-                    <div className='relative'>
+                  <label className="flex cursor-pointer select-none items-center hover:text-wcg_blue">
+                    <div className="relative">
                       <input
-                        type='checkbox'
+                        type="checkbox"
                         checked={isChecked}
                         onChange={() => setIsChecked(!isChecked)}
-                        className='sr-only'
+                        className="sr-only"
                       />
-                      <div className={`box mr-2 flex h-5 w-5 items-center justify-center rounded-full border border-wcg_blue/25`}>
+                      <div
+                        className={`box mr-2 flex h-5 w-5 items-center justify-center rounded-full border border-wcg_blue/25`}
+                      >
                         <span
-                          className={`h-[10px] w-[10px] rounded-full ${isChecked ? 'bg-wcg_blue' : "bg-wcg_lightblue"}`}
+                          className={`h-[10px] w-[10px] rounded-full ${
+                            isChecked ? "bg-wcg_blue" : "bg-wcg_lightblue"
+                          }`}
                         >
-                          {' '}
+                          {" "}
                         </span>
                       </div>
                     </div>
                     Keep me logged in
                   </label>
                   <div>
-                    <span className="self-end cursor-pointer hover:text-wcg_blue" onClick={() => nav("/password/reset")}>
+                    <span
+                      className="self-end cursor-pointer hover:text-wcg_blue"
+                      onClick={() => nav("/password/reset")}
+                    >
                       Forgot Password?
                     </span>
                   </div>
                 </div>
-
 
                 <button
                   disabled={loading}

@@ -2,7 +2,9 @@
 import { lazy } from "react";
 const SignIn = lazy(() => import("../pages/signIn/SignIn"));
 const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
-const PasswordResetForm = lazy(() => import("../pages/passwordReset/PasswordReset"));
+const PasswordResetForm = lazy(
+  () => import("../pages/passwordReset/PasswordReset"),
+);
 
 export const routesData = [
   // Authenticate require as per need

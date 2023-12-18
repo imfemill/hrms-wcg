@@ -26,7 +26,7 @@ export default function PasswordResetForm() {
         onSubmit={async (values) => {
           console.log(values);
           setLoading(!loading);
-          nav("/signin")
+          nav("/signin");
         }}
         validationSchema={schema}
       >
@@ -64,7 +64,6 @@ export default function PasswordResetForm() {
                 </label>
               </div>
 
-
               <div className="select-none mt-8 w-100 gap-2">
                 <button
                   disabled={loading}
@@ -80,7 +79,10 @@ export default function PasswordResetForm() {
 
                 <div className="flex justify-between text-xs font-medium text-wcg_navy">
                   <div>
-                    <span className="self-end cursor-pointer hover:text-wcg_blue" onClick={() => nav("/signin")}>
+                    <span
+                      className="self-end cursor-pointer hover:text-wcg_blue"
+                      onClick={() => nav("/signin")}
+                    >
                       I remembered my password
                     </span>
                   </div>
