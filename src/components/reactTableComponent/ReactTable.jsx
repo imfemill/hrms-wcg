@@ -18,11 +18,7 @@ const ReactTable = ({ columns, data }) => {
         {headerGroups.map((headerGroup, i) => (
           <tr {...headerGroup.getHeaderGroupProps()} key={i}>
             {headerGroup.headers.map((column, index) => (
-              <th
-                {...column.getHeaderProps()}
-                className="p-2 "
-                key={index}
-              >
+              <th {...column.getHeaderProps()} className="p-2 " key={index}>
                 {column.render("header")}
               </th>
             ))}

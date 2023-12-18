@@ -1,4 +1,3 @@
-
-  .data_table::-webkit-scrollbar {
-    display: none;
-  }
+.data_table::-webkit-scrollbar {
+  display: none;
+}
