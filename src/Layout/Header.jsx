@@ -6,12 +6,7 @@ import {
 import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
 
-export default function Header({ setSidebarOpen, classNames }) {
-  const userNavigation = [
-    { name: "Your profile", href: "#" },
-    { name: "Sign out", href: "#" },
-  ];
-
+export default function Header({ setSidebarOpen, classNames, userNavigation }) {
   return (
     <>
       <div className="lg:pl-14 xl:pl-[14%]">
@@ -102,7 +97,7 @@ export default function Header({ setSidebarOpen, classNames }) {
                             href={item.href}
                             className={classNames(
                               active ? "bg-gray-50" : "",
-                              "block px-3 py-1 text-sm leading-6 text-gray-900"
+                              "block px-3 py-1 text-sm leading-6 text-gray-900",
                             )}
                           >
                             {item.name}

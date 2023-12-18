@@ -1,6 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 export default function Sidebar({
@@ -83,7 +83,7 @@ export default function Sidebar({
                                 item.current
                                   ? "bg-blue-50 text-blue-600"
                                   : "text-gray-400 hover:text-blue-600 hover:bg-gray-50",
-                                "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold "
+                                "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold ",
                               )}
                             >
                               <item.icon
@@ -118,7 +118,7 @@ export default function Sidebar({
                       item.current
                         ? "bg-blue-50 text-blue-600"
                         : "text-gray-400 hover:text-blue-600 hover:bg-blue-50",
-                      "group flex lg:pl-1.5 gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                      "group flex lg:pl-1.5 gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold",
                     )}
                   >
                     <item.icon
