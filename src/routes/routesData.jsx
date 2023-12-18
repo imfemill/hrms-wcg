@@ -2,7 +2,7 @@
 import { lazy } from "react";
 const SignIn = lazy(() => import("../pages/signIn/SignIn"));
 const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
-const Register = lazy(() => import("../pages/register/Register"));
+const PasswordResetForm = lazy(() => import("../pages/passwordReset/PasswordReset"));
 
 export const routesData = [
   // Authenticate require as per need
@@ -12,14 +12,14 @@ export const routesData = [
     element: <Dashboard />,
   },
   {
-    name: "login",
-    path: "/login",
+    name: "signIn",
+    path: "/signin",
     element: <SignIn />,
   },
   {
-    name: "register",
-    path: "/register",
-    element: <Register />,
+    name: "passwordReset",
+    path: "/password/reset",
+    element: <PasswordResetForm />,
   },
   //   ... as per need
 ];
