@@ -41,15 +41,15 @@ const Card = () => {
     setHeight(expanded ? "0px" : `${contentSpace.current.scrollHeight}px`);
     setRotate(
       expanded
-        ? "transform duration-700 ease"
-        : "transform duration-700 ease rotate-180",
+        ? "transform duration-500 ease"
+        : "transform duration-500 ease -rotate-180",
     );
   };
   return (
-    <div className="bg-white shadow-lg p-4  ">
+    <div className="bg-white shadow-xl p-4 rounded-md ">
       <div className="flex justify-between">
         <div>My Leave</div>
-        <div onClick={() => toggleAccordion()}>
+        <div onClick={() => toggleAccordion()} className="cursor-pointer">
           <ChevronDownIcon
             className={`h-5 w-5 text-wcg_blue hover:text-wcg_navy ${rotate}`}
           />
@@ -67,15 +67,13 @@ const Card = () => {
       <div
         ref={contentSpace}
         style={{ maxHeight: `${height}` }}
-        className="overflow-auto transition-max-height duration-700 ease-in-out data_table"
+        className="overflow-auto transition-max-height duration-500 ease-in-out data_table"
       >
         <div className="">
           <ReactTable columns={columns} data={data} />
         </div>
       </div>
     </div>
-
-    // </div>
   );
 };
 
