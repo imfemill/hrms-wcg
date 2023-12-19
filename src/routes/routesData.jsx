@@ -2,7 +2,9 @@
 import { lazy } from "react";
 
 const SignIn = lazy(() => import("../pages/signIn/SignIn"));
-const PasswordResetForm = lazy(() => import("../pages/passwordReset/PasswordReset"));
+const PasswordResetForm = lazy(
+  () => import("../pages/passwordReset/PasswordReset"),
+);
 
 const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
 const Team = lazy(() => import("../pages/team/Team"));
@@ -11,8 +13,12 @@ const Calender = lazy(() => import("../pages/calender/Calender"));
 const Projects = lazy(() => import("../pages/projects/Projects"));
 const Documents = lazy(() => import("../pages/documents/Documents"));
 const Reports = lazy(() => import("../pages/reports/Reports"));
-const MyInvestments = lazy(() => import("../pages/myInvestments/MyInvestments"));
-const CompanyPolicy = lazy(() => import("../pages/companyPolicy/CompanyPolicy"));
+const MyInvestments = lazy(
+  () => import("../pages/myInvestments/MyInvestments"),
+);
+const CompanyPolicy = lazy(
+  () => import("../pages/companyPolicy/CompanyPolicy"),
+);
 
 export const routesData = [
   // Authenticate require as per need

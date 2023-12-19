@@ -1,7 +1,5 @@
 import { Menu, Transition } from "@headlessui/react";
-import {
-  ChevronDownIcon
-} from "@heroicons/react/20/solid";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
 

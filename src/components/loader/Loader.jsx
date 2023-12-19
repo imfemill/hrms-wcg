@@ -1,4 +1,3 @@
-
 import Loader from "../../assets/loader.svg";
 
 const LoaderComponent = () => {
@@ -10,7 +9,7 @@ const LoaderComponent = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LoaderComponent
+export default LoaderComponent;

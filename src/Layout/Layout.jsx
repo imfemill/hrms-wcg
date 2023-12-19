@@ -7,7 +7,7 @@ import {
   UsersIcon,
   BanknotesIcon,
   ComputerDesktopIcon,
-  CalendarDaysIcon
+  CalendarDaysIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Outlet } from "react-router";
@@ -26,9 +26,19 @@ const navigation = [
     icon: BanknotesIcon,
     current: false,
   },
-  { name: "Documents", href: "/documents", icon: DocumentDuplicateIcon, current: false },
+  {
+    name: "Documents",
+    href: "/documents",
+    icon: DocumentDuplicateIcon,
+    current: false,
+  },
   { name: "Reports", href: "/reports", icon: ChartPieIcon, current: false },
-  { name: "Company Policy", href: "/company-policy", icon: ComputerDesktopIcon, current: false },
+  {
+    name: "Company Policy",
+    href: "/company-policy",
+    icon: ComputerDesktopIcon,
+    current: false,
+  },
 ];
 
 const userNavigation = [

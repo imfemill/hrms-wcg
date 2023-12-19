@@ -9,8 +9,8 @@ export default function Sidebar({
   navigation,
   classNames,
 }) {
-  const nav = useNavigate()
-  const { pathname } = useLocation()
+  const nav = useNavigate();
+  const { pathname } = useLocation();
   return (
     <>
       <div>
@@ -109,8 +109,13 @@ export default function Sidebar({
         {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:w-14 xl:!w-[14%]  lg:hover:w-[20%] lg:overflow-y-auto lg:pb-4 transition-all bg-[#ffffff]">
           <div className="flex h-20 shrink-0 items-center pl-[12%]">
-            <div className="w-4/6  border-b-4 border-wcg_orange pb-2" >
-              <span className="font-bold text-wcg_blue text-3xl cursor-pointer" onClick={() => nav("/")}>HRMS</span>
+            <div className="w-4/6  border-b-4 border-wcg_orange pb-2">
+              <span
+                className="font-bold text-wcg_blue text-3xl cursor-pointer"
+                onClick={() => nav("/")}
+              >
+                HRMS
+              </span>
             </div>
           </div>
           <nav className="mt-8 lg:pr-10">
