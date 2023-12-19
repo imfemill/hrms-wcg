@@ -60,6 +60,7 @@ const Layout = () => {
           setSidebarOpen={setSidebarOpen}
           classNames={classNames}
           userNavigation={userNavigation}
+          navigation={navigation}
         />
         <Sidebar
           setSidebarOpen={setSidebarOpen}
