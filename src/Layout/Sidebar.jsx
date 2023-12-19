@@ -87,7 +87,7 @@ export default function Sidebar({
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:w-16 xl:!w-72 lg:hover:w-[20%] lg:overflow-y-auto lg:bg-white lg:pb-4 transition-all border">
+        <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:w-16 xl:!w-72 lg:hover:w-[20%] lg:overflow-y-auto lg:bg-white lg:pb-4 transition-all">
           <div className="flex h-20 shrink-0 items-center pl-[12%]">
             <div className="w-4/6  border-b-4 border-wcg_orange pb-2">
               <span
