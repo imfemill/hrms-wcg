@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import SidebarMenu from "./SidebarMenu";
 
 export default function Sidebar({
@@ -11,7 +11,6 @@ export default function Sidebar({
   classNames,
 }) {
   const nav = useNavigate();
-  const { pathname } = useLocation();
   return (
     <>
       <div>

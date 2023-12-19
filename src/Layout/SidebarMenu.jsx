@@ -1,5 +1,5 @@
 import { ChartPieIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function SidebarMenu({ navigation, classNames }) {
@@ -52,7 +52,7 @@ export default function SidebarMenu({ navigation, classNames }) {
                   item.href === pathname
                     ? "bg-blue-50 text-wcg_blue border-l-4 border-wcg_blue"
                     : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50",
-                  "group cursor-pointer flex pl-4 xl:pl-7 gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold "
+                  "group cursor-pointer flex pl-4 xl:pl-7 gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold ",
                 )}
               >
                 <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
@@ -77,7 +77,7 @@ export default function SidebarMenu({ navigation, classNames }) {
                   open === item.name
                     ? "bg-blue-50 text-wcg_blue  border-l-4 border-wcg_blue"
                     : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50",
-                  "group cursor-pointer flex pl-4 xl:pl-7 gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold relative"
+                  "group cursor-pointer flex pl-4 xl:pl-7 gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold relative",
                 )}
               >
                 <ChartPieIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
@@ -98,10 +98,10 @@ export default function SidebarMenu({ navigation, classNames }) {
                     <Link
                       to={"/"}
                       className={classNames(
-                        false
+                        open === item.name
                           ? "bg-blue-50 text-wcg_blue  border-l-4 border-wcg_blue"
                           : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50",
-                        "group cursor-pointer flex pl-4 xl:pl-7 gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold "
+                        "group cursor-pointer flex pl-4 xl:pl-7 gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold ",
                       )}
                     >
                       <ChartPieIcon
