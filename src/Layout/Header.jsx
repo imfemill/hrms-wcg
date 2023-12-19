@@ -46,7 +46,7 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
             <div className="flex items-center gap-x-4 lg:gap-x-6">
               <button
                 type="button"
-                className="-m-2.5 p-2.5 text-gray-400 hover:text-blue-600"
+                className="-m-2.5 p-2.5 text-gray-400 hover:text-wcg_blue"
               >
                 <span className="sr-only">View notifications</span>
                 <BellIcon className="h-6 w-6 " aria-hidden="true" />
@@ -69,13 +69,13 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
                   />
                   <span className="hidden lg:flex lg:items-center">
                     <span
-                      className="ml-4 text-sm font-semibold leading-6 text-gray-900"
+                      className="ml-4 text-sm font-semibold leading-6 text-wcg_blue"
                       aria-hidden="true"
                     >
                       Mr. india
                     </span>
                     <ChevronDownIcon
-                      className="ml-2 h-5 w-5 text-gray-400 hover:text-blue-600"
+                      className="ml-2 h-5 w-5 text-gray-400 hover:text-wcg_blue"
                       aria-hidden="true"
                     />
                   </span>

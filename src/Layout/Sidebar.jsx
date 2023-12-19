@@ -81,8 +81,8 @@ export default function Sidebar({
                               to={item.href}
                               className={classNames(
                                 item.current
-                                  ? "bg-blue-50 text-blue-600"
-                                  : "text-gray-400 hover:text-blue-600 hover:bg-gray-50",
+                                  ? "bg-blue-50 text-wcg_blue"
+                                  : "text-gray-400 hover:text-wcg_blue hover:bg-gray-50",
                                 "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold ",
                               )}
                             >
@@ -106,7 +106,7 @@ export default function Sidebar({
         {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:w-14 xl:!w-[14%]  lg:hover:w-[20%] lg:overflow-y-auto lg:bg-white lg:pb-4 transition-all border border-l-2">
           <div className="flex h-16 shrink-0 items-center pl-[12%]">
-            <span className="font-bold text-blue-600 text-4xl">HRMS</span>
+            <span className="font-bold text-wcg_blue text-3xl">HRMS</span>
           </div>
           <nav className="mt-8 lg:px-2">
             <ul role="list" className="flex-1 space-y-1 ">
@@ -116,8 +116,8 @@ export default function Sidebar({
                     href={item.href}
                     className={classNames(
                       item.current
-                        ? "bg-blue-50 text-blue-600"
-                        : "text-gray-400 hover:text-blue-600 hover:bg-blue-50",
+                        ? "bg-blue-50 text-wcg_blue"
+                        : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50",
                       "group flex lg:pl-1.5 gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold",
                     )}
                   >

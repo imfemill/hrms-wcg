@@ -13,6 +13,7 @@ export default {
         wcg_orange: "#F66B0E",
         wcg_gray: "#EFEFEF",
         wcg_lightblue: "#efffff",
+        wcg_powderBlue: "#e4f2f9",
       },
       boxShadow: {},
     },
