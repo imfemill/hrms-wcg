@@ -1,7 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import SidebarMenu from "./SidebarMenu";
 
 export default function Sidebar({
   setSidebarOpen,
@@ -10,7 +11,6 @@ export default function Sidebar({
   classNames,
 }) {
   const nav = useNavigate();
-  const { pathname } = useLocation();
   return (
     <>
       <div>
@@ -75,30 +75,10 @@ export default function Sidebar({
                         alt="Your Company"
                       />
                     </div>
-                    <nav className="flex flex-1 flex-col">
-                      <ul role="list" className="-mx-2 flex-1 space-y-1">
-                        {navigation.map((item) => (
-                          <li key={item.name}>
-                            <span
-                              to={item.href}
-                              className={classNames(
-                                item.href === pathname
-                                  ? "bg-blue-50 text-wcg_blue"
-                                  : "text-gray-400 hover:text-wcg_blue hover:bg-gray-50",
-                                "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold ",
-                              )}
-                              onClick={() => nav(item.href)}
-                            >
-                              <item.icon
-                                className="h-6 w-6 shrink-0"
-                                aria-hidden="true"
-                              />
-                              {item.name}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </nav>
+                    <SidebarMenu
+                      navigation={navigation}
+                      classNames={classNames}
+                    />
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
@@ -107,7 +87,7 @@ export default function Sidebar({
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:w-14 xl:!w-[14%]  lg:hover:w-[20%] lg:overflow-y-auto lg:pb-4 transition-all bg-[#ffffff]">
+        <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:w-16 xl:!w-72 lg:hover:w-[20%] lg:overflow-y-auto lg:bg-white lg:pb-4 transition-all border">
           <div className="flex h-20 shrink-0 items-center pl-[12%]">
             <div className="w-4/6  border-b-4 border-wcg_orange pb-2">
               <span
@@ -118,31 +98,7 @@ export default function Sidebar({
               </span>
             </div>
           </div>
-          <nav className="mt-8 lg:pr-10">
-            <ul role="list" className="flex-1 space-y-1 ">
-              {navigation.map((item) => (
-                <li key={item.name}>
-                  <span
-                    onClick={() => nav(item.href)}
-                    className={classNames(
-                      item.href === pathname
-                        ? "bg-blue-50 text-wcg_blue  border-l-4 border-wcg_blue"
-                        : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50",
-                      "group cursor-pointer flex lg:pl-7 gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold",
-                    )}
-                  >
-                    <item.icon
-                      className="h-6 w-6 shrink-0"
-                      aria-hidden="true"
-                    />
-                    <span className="lg:pl-1 lg: invisible lg:visible ">
-                      {item.name}
-                    </span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <SidebarMenu navigation={navigation} classNames={classNames} />
         </div>
       </div>
     </>
