@@ -1,0 +1,37 @@
+.markdown > * {
+  all: revert;
+}
+
+.markdown tr {
+  border-top: 1px solid #c6cbd1;
+  background: #fff;
+}
+
+.markdown th,
+.markdown td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+.markdown table {
+  border-collapse: collapse;
+  width: 40%;
+}
+.markdown table tr:nth-child(2n) {
+  background: #f6f8fa;
+}
+.markdown h2{
+  font-weight: 400;
+  color:#475F7B;
+  font-size: large;
+}
+.markdown h3{
+  text-align: center;
+  text-decoration: underline;
+}
+.markdown h5{
+  font-size: 15px;
+}
+
+.markdown a{
+  color: rgb(59, 109, 185);
+}
