@@ -19,19 +19,19 @@
 .markdown table tr:nth-child(2n) {
   background: #f6f8fa;
 }
-.markdown h2{
+.markdown h2 {
   font-weight: 400;
-  color:#475F7B;
+  color: #475f7b;
   font-size: large;
 }
-.markdown h3{
+.markdown h3 {
   text-align: center;
   text-decoration: underline;
 }
-.markdown h5{
+.markdown h5 {
   font-size: 15px;
 }
 
-.markdown a{
+.markdown a {
   color: rgb(59, 109, 185);
 }
