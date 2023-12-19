@@ -5,7 +5,7 @@ import {
   FolderIcon,
   HomeIcon,
   UsersIcon,
-  BanknotesIcon
+  BanknotesIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Outlet } from "react-router";
@@ -17,7 +17,12 @@ const navigation = [
   { name: "Team", href: "/team", icon: UsersIcon, current: false },
   { name: "Projects", href: "/projects", icon: FolderIcon, current: false },
   { name: "Calendar", href: "/calender", icon: CalendarIcon, current: false },
-  { name: "My Investments", href: "/my-investments", icon: BanknotesIcon, current: false },
+  {
+    name: "My Investments",
+    href: "/my-investments",
+    icon: BanknotesIcon,
+    current: false,
+  },
   { name: "Documents", href: "/", icon: DocumentDuplicateIcon, current: false },
   { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
   { name: "Company Policy", href: "#", icon: BanknotesIcon, current: false },
