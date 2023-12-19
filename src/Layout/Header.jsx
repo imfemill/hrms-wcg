@@ -2,12 +2,17 @@ import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
+import { useNavigate } from "react-router-dom";
+import { AddressBar } from "../components/breadCrumb/BredCrumb";
 
 export default function Header({ setSidebarOpen, classNames, userNavigation }) {
+  const nav = useNavigate();
+
   return (
     <>
       <div className="lg:pl-14 xl:pl-[14%]">
         <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center bg-[#f9fdff] p-10 sm:gap-x-6 sm:px-6 lg:px-8">
+          <AddressBar />
           <button
             type="button"
             className="-m-2.5 p-2.5 text-gray-700 lg:hidden"
@@ -17,17 +22,11 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
 
-          {/* Separator */}
-          {/* <div
-            className="h-6 w-px bg-wcg_navy/10 lg:hidden"
-            aria-hidden="true"
-          /> */}
-
           <div className="flex flex-1 justify-end gap-x-4 self-stretch lg:gap-x-6">
             <div className="flex items-center gap-x-4 lg:gap-x-6">
               <button
                 type="button"
-                className="-m-2.5 p-2.5 text-wcg_blue/50 hover:text-wcg_blue"
+                className="-m-2.5 p-2.5 text-wcg_navy/70 hover:text-wcg_navy"
               >
                 <span className="sr-only">View notifications</span>
                 <BellIcon className="h-6 w-6 " aria-hidden="true" />
@@ -50,13 +49,13 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
                   />
                   <span className="hidden lg:flex lg:items-center">
                     <span
-                      className="ml-4 text-sm font-semibold leading-6 text-wcg_blue"
+                      className="ml-4 text-sm font-semibold leading-6 text-wcg_navy/70"
                       aria-hidden="true"
                     >
                       John Doe
                     </span>
                     <ChevronDownIcon
-                      className="ml-2 h-5 w-5 text-wcg_blue/50 hover:text-wcg_blue"
+                      className="ml-2 h-5 w-5 text-wcg_navy/70 hover:text-wcg_blue"
                       aria-hidden="true"
                     />
                   </span>
@@ -74,15 +73,15 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
                     {userNavigation.map((item) => (
                       <Menu.Item key={item.name}>
                         {({ active }) => (
-                          <a
-                            href={item.href}
+                          <span
+                            onClick={() => nav(item.href)}
                             className={classNames(
                               active ? "bg-wcg_navy/50" : "",
-                              "block px-3 py-1 text-sm leading-6 text-gray-900",
+                              "block px-3 py-1 text-sm leading-6 text-wcg_navy",
                             )}
                           >
                             {item.name}
-                          </a>
+                          </span>
                         )}
                       </Menu.Item>
                     ))}

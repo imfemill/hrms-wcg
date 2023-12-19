@@ -4,10 +4,10 @@ import SignInImage from "../../assets/signin.svg";
 const SignIn = () => {
   return (
     <section className="bg-[#E4F1FF]">
-      <div className="h-screen w-screen bg-opacity-50 flex items-center justify-center">
-        <div className="select-none max-lg:m-1 lg:w-2/3 flex shadow-2xl rounded-lg">
-          <div className="lg:w-1/2 p-10 bg-[#fefefe] flex justify-center items-center rounded-l-lg">
-            <div className="my-14">
+      <div className="min-h-screen min-w-screen bg-opacity-50 flex items-center justify-center">
+        <div className="select-none md:m-10 max-lg:m-5 lg:w-3/4 max-lg:flex-col flex shadow-2xl rounded-lg">
+          <div className="lg:w-1/2 p-10 bg-[#fefefe] flex order-1 max-lg:order-2 justify-center items-center rounded-l-lg max-lg:rounded-b-lg">
+            <div className="my-10 max-lg:my-5">
               <h1 className="text-3xl flex font-semibold text-wcg_blue">
                 Welcome HRMS
               </h1>
@@ -22,7 +22,7 @@ const SignIn = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 bg-wcg_blue flex justify-center items-center p-10 rounded-r-lg">
+          <div className="lg:w-1/2 bg-wcg_blue flex justify-center order-2 max-lg:order-1 items-center p-10 rounded-r-lg max-lg:rounded-t-lg">
             <img src={SignInImage} alt="login" />
           </div>
         </div>
