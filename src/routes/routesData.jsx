@@ -1,10 +1,10 @@
-import Dashboard from "../pages/dashboard/Dashboard"
-import Team from "../pages/team/Team"
-import Leaves from "../pages/leaves/Leaves"
-import Calender from "../pages/calender/Calender"
-import Projects from "../pages/projects/Projects"
-import Documents from "../pages/documents/Documents"
-import Reports from "../pages/reports/Reports"
+import Dashboard from "../pages/dashboard/Dashboard";
+import Team from "../pages/team/Team";
+import Leaves from "../pages/leaves/Leaves";
+import Calender from "../pages/calender/Calender";
+import Projects from "../pages/projects/Projects";
+import Documents from "../pages/documents/Documents";
+import Reports from "../pages/reports/Reports";
 import CompanyPolicy from "../pages/companyPolicy/CompanyPolicy";
 import MyInvestments from "../pages/myInvestments/MyInvestments";
 
