@@ -6,6 +6,8 @@ import {
   HomeIcon,
   UsersIcon,
   BanknotesIcon,
+  ComputerDesktopIcon,
+  CalendarDaysIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Outlet } from "react-router";
@@ -15,18 +17,30 @@ import Sidebar from "./Sidebar";
 const navigation = [
   { name: "Dashboard", href: "/", icon: HomeIcon, current: true },
   { name: "Team", href: "/team", icon: UsersIcon, current: false },
-  { name: "Projects", href: "/projects", icon: FolderIcon, current: false },
+  { name: "Leaves", href: "/leaves", icon: CalendarDaysIcon, current: false },
   { name: "Calendar", href: "/calender", icon: CalendarIcon, current: false },
+  { name: "Projects", href: "/projects", icon: FolderIcon, current: false },
   {
     name: "My Investments",
     href: "/my-investments",
     icon: BanknotesIcon,
     current: false,
   },
-  { name: "Documents", href: "/", icon: DocumentDuplicateIcon, current: false },
-  { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
-  { name: "Company Policy", href: "#", icon: BanknotesIcon, current: false },
+  {
+    name: "Documents",
+    href: "/documents",
+    icon: DocumentDuplicateIcon,
+    current: false,
+  },
+  { name: "Reports", href: "/reports", icon: ChartPieIcon, current: false },
+  {
+    name: "Company Policy",
+    href: "/company-policy",
+    icon: ComputerDesktopIcon,
+    current: false,
+  },
 ];
+
 const userNavigation = [
   { name: "Your profile", href: "#" },
   { name: "Sign out", href: "#" },
@@ -53,7 +67,7 @@ const Layout = () => {
           navigation={navigation}
           classNames={classNames}
         />
-        <main className="lg:pl-14 xl:pl-[14%] bg-blue-50">
+        <main className="lg:pl-14 xl:pl-[14%] bg-[#f9fdff]">
           <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
             {/* Main area */}
             <div>
