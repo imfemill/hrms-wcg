@@ -40,15 +40,17 @@ export default function SidebarMenu({ navigation, classNames }) {
                   {item.name}
                   {item?.children && (
                     <ChevronLeftIcon
-                      className={`${open === item.name ? "rotate-180" : ""
-                        } transition-all duration-300 text-wcg_blue font-bold h-5 w-5 absolute right-2 lg:!right-0 lg:px-0.5 top-5`}
+                      className={`${
+                        open === item.name ? "rotate-180" : ""
+                      } transition-all duration-300 text-wcg_blue font-bold h-5 w-5 absolute right-2 lg:!right-0 lg:px-0.5 top-5`}
                     />
                   )}
                   {item?.children && (
                     <div className="absolute top-0 right-2">
                       <ul
-                        className={`${open === item.name ? "" : "!hidden "
-                          } transition-all duration-300 fixed left-28 z-10 origin-top-right rounded-md bg-white shadow-lg `}
+                        className={`${
+                          open === item.name ? "" : "!hidden "
+                        } transition-all duration-300 fixed left-28 z-10 origin-top-right rounded-md bg-white shadow-lg `}
                       >
                         {item?.children?.map((childItem) => (
                           <li key={childItem?.name} className="flex">
