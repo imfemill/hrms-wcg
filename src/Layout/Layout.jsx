@@ -9,7 +9,7 @@ import {
   ComputerDesktopIcon,
   CalendarDaysIcon,
   UserCircleIcon,
-  ArrowRightOnRectangleIcon
+  ArrowRightOnRectangleIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Outlet } from "react-router";

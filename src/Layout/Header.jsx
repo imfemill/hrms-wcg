@@ -9,7 +9,7 @@ import { Avatar } from "../components/avatar/Avatar";
 
 export default function Header({ setSidebarOpen, classNames, userNavigation }) {
   const nav = useNavigate();
-  var name = "Femil Patodiya"
+  var name = "Femil Patodiya";
 
   return (
     <>
@@ -82,7 +82,10 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
                               "group cursor-pointer flex gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold ",
                             )}
                           >
-                            <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
+                            <item.icon
+                              className="h-6 w-6 shrink-0"
+                              aria-hidden="true"
+                            />
                             <span>{item.name}</span>
                           </span>
                         )}

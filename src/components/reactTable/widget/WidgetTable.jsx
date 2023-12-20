@@ -13,7 +13,10 @@ const ReactTable = ({ columns, data }) => {
     data,
   });
   return (
-    <table {...getTableProps()} className="table-auto text-sm border-collapse w-full border-t-2 border-wcg_navy/70">
+    <table
+      {...getTableProps()}
+      className="table-auto text-sm border-collapse w-full border-t-2 border-wcg_navy/70"
+    >
       <thead className="bg-blue-100 text-wcg_navy">
         {headerGroups.map((headerGroup, i) => (
           <tr {...headerGroup.getHeaderGroupProps()} key={i}>

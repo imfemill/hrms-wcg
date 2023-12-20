@@ -5,10 +5,7 @@ import { widgetColumn } from "../reactTable/widget/widgetColumns";
 import "./card.css";
 
 const Card = ({ widget }) => {
-  const columns = useMemo(
-    () => widgetColumn(widget.title),
-    [widget],
-  );
+  const columns = useMemo(() => widgetColumn(widget.title), [widget]);
 
   const contentSpace = useRef(null);
   const [expanded, setExpanded] = useState(false);
@@ -27,25 +24,35 @@ const Card = ({ widget }) => {
   return (
     <div className="shadow-xl shadow-wcg_navy/20 p-5 block h-fit w-4/5 rounded-lg bg-blue-50">
       <div className="flex gap-0 justify-between px-5 py-4 rounded-t-lg">
-        <div className="text-lg font-semibold text-wcg_blue hover:text-wcg_navy border-b-2 border-wcg_orange">{widget?.title}</div>
+        <div className="text-lg font-semibold text-wcg_blue hover:text-wcg_navy border-b-2 border-wcg_orange">
+          {widget?.title}
+        </div>
         <div onClick={() => toggleAccordion()} className="cursor-pointer">
-          <img src={openCloseIcon} alt="leaves" className={`h-5 w-5 ${rotate}`} />
+          <img
+            src={openCloseIcon}
+            alt="leaves"
+            className={`h-5 w-5 ${rotate}`}
+          />
         </div>
       </div>
       <div className="flex gap-3 justify-between w-full p-5">
         {widget?.states.map((state, key) => (
           <Fragment key={key}>
             <div className={`w-1${widget?.states.length} flex flex-col`}>
-              <div className="text-xl font- text-wcg_navy/70">{state.count}</div>
-              <div className="text-sm font-medium text-wcg_navy/80">{state?.name}</div>
+              <div className="text-xl font- text-wcg_navy/70">
+                {state.count}
+              </div>
+              <div className="text-sm font-medium text-wcg_navy/80">
+                {state?.name}
+              </div>
             </div>
-            {
-              widget?.states?.length > 1 && key + 1 !== widget?.states?.length &&
-              <div
-                className="hidden lg:block lg:w-px lg:bg-wcg_navy/10"
-                aria-hidden="true"
-              />
-            }
+            {widget?.states?.length > 1 &&
+              key + 1 !== widget?.states?.length && (
+                <div
+                  className="hidden lg:block lg:w-px lg:bg-wcg_navy/10"
+                  aria-hidden="true"
+                />
+              )}
           </Fragment>
         ))}
       </div>
