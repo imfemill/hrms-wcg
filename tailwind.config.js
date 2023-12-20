@@ -16,6 +16,9 @@ export default {
         wcg_powderBlue: "#e4f2f9",
       },
       boxShadow: {},
+      rotate: {
+        480: "480deg",
+      },
     },
   },
   plugins: [

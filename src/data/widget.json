@@ -1,0 +1,113 @@
+[
+  {
+    "title": "My Leaves",
+    "states": [
+      {
+        "name": "Total Leave",
+        "count": 5
+      },
+      {
+        "name": "Total Approved Leaves",
+        "count": 4
+      },
+      {
+        "name": "Pending Leaves",
+        "count": 1
+      }
+    ],
+    "table": [
+      {
+        "assignee_name": "Kuldeep Chhatrala",
+        "date": "22-12-2023 (Friday)",
+        "days": "1",
+        "status": "Pending",
+        "type": "Casual"
+      },
+      {
+        "assignee_name": "Kuldeep Chhatrala",
+        "date": "16-11-2023 (Thursday)",
+        "days": "1",
+        "status": "Approved",
+        "type": "Casual"
+      },
+      {
+        "assignee_name": "Ishita Rajguru",
+        "date": "10-11-2023 (Friday)",
+        "days": "1",
+        "status": "Approved",
+        "type": "Medical"
+      },
+      {
+        "assignee_name": "Kuldeep Chhatrala",
+        "date": "28-11-2023 (Tuesday)",
+        "days": "0",
+        "status": "Approved",
+        "type": "Casual"
+      },
+      {
+        "assignee_name": "Kuldeep Chhatrala",
+        "date": "23-10-2023 (Monday)",
+        "days": "1",
+        "status": "Approved",
+        "type": "Casual"
+      }
+    ]
+  },
+  {
+    "title": "Upcoming Birthdays",
+    "states": [
+      {
+        "name": "Upcoming Birthdays",
+        "count": 1
+      }
+    ],
+    "table": [
+      {
+        "person_name": "Milan Gojiya",
+        "role": "Employee",
+        "department": "ReactJS",
+        "dob": "1st of January"
+      }
+    ]
+  },
+  {
+    "title": "Upcoming Holidays",
+    "states": [
+      {
+        "name": "Total Holidays",
+        "count": 19
+      },
+      {
+        "name": "Upcoming Holidays",
+        "count": 1
+      }
+    ],
+    "table": [
+      {
+        "title": "X-mas",
+        "date": "25-12-2023 (Monday)"
+      }
+    ]
+  },
+  {
+    "title": "Upcoming Events",
+    "states": [
+      {
+        "name": "Total Event",
+        "count": 1
+      },
+      {
+        "name": "Upcoming Event",
+        "count": 1
+      }
+    ],
+    "table": [
+      {
+        "title": "New Year Celebration",
+        "date": "1-1-2024 (Monday)",
+        "private": "true",
+        "created_by": "Kuldeep Chhatrala"
+      }
+    ]
+  }
+]
