@@ -1,13 +1,12 @@
 import {
+  BanknotesIcon,
+  CalendarDaysIcon,
   CalendarIcon,
   ChartPieIcon,
+  ComputerDesktopIcon,
   DocumentDuplicateIcon,
-  FolderIcon,
   HomeIcon,
   UsersIcon,
-  BanknotesIcon,
-  ComputerDesktopIcon,
-  CalendarDaysIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Outlet } from "react-router";

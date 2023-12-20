@@ -20,7 +20,7 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
             <span className="sr-only">Open sidebar</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
-          <AddressBar />  
+          <AddressBar />
 
           <div className="flex flex-1 justify-end gap-x-4 self-stretch lg:gap-x-6">
             <div className="flex items-center gap-x-4 lg:gap-x-6">
@@ -77,7 +77,7 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
                             onClick={() => nav(item.href)}
                             className={classNames(
                               active ? "bg-wcg_navy/50" : "",
-                              "block px-3 py-1 text-sm leading-6 text-wcg_navy"
+                              "block px-3 py-1 text-sm leading-6 text-wcg_navy",
                             )}
                           >
                             {item.name}
