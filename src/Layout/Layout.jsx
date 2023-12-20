@@ -1,13 +1,12 @@
 import {
+  BanknotesIcon,
+  CalendarDaysIcon,
   CalendarIcon,
   ChartPieIcon,
+  ComputerDesktopIcon,
   DocumentDuplicateIcon,
-  FolderIcon,
   HomeIcon,
   UsersIcon,
-  BanknotesIcon,
-  ComputerDesktopIcon,
-  CalendarDaysIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Outlet } from "react-router";
@@ -17,9 +16,27 @@ import Sidebar from "./Sidebar";
 const navigation = [
   { name: "Dashboard", href: "/", icon: HomeIcon, current: true },
   { name: "Team", href: "/team", icon: UsersIcon, current: false },
-  { name: "Leaves", href: "/leaves", icon: CalendarDaysIcon, current: false },
+  {
+    name: "Leaves",
+    href: "/leaves",
+    icon: CalendarDaysIcon,
+    current: false,
+    children: [
+      {
+        name: "My Leaves",
+        href: "/leaves/myleave",
+        icon: ChartPieIcon,
+        current: false,
+      },
+      {
+        name: "Create Leave",
+        href: "/leaves/createleave",
+        icon: ChartPieIcon,
+        current: false,
+      },
+    ],
+  },
   { name: "Calendar", href: "/calender", icon: CalendarIcon, current: false },
-  { name: "Projects", href: "/projects", icon: FolderIcon, current: false },
   {
     name: "My Investments",
     href: "/my-investments",
@@ -68,12 +85,10 @@ const Layout = () => {
           navigation={navigation}
           classNames={classNames}
         />
-        <main className="lg:pl-14 xl:pl-[14%] bg-[#f9fdff]">
+        <main className="lg:pl-28 bg-[#f9fdff]">
           <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
             {/* Main area */}
-            <div>
-              <Outlet />
-            </div>
+            <Outlet />
           </div>
         </main>
       </div>
