@@ -7,6 +7,8 @@ import {
   DocumentDuplicateIcon,
   HomeIcon,
   UsersIcon,
+  UserCircleIcon,
+  ArrowRightOnRectangleIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Outlet } from "react-router";
@@ -59,8 +61,8 @@ const navigation = [
 ];
 
 const userNavigation = [
-  { name: "Your profile", href: "#" },
-  { name: "Sign out", href: "#" },
+  { name: "Profile", href: "/profile", icon: UserCircleIcon },
+  { name: "Sign out", href: "/signin", icon: ArrowRightOnRectangleIcon },
 ];
 
 function classNames(...classes) {
@@ -72,7 +74,7 @@ const Layout = () => {
 
   return (
     <>
-      <div>
+      <div className="bg-[#f9fdff] min-h-screen">
         <Header
           setSidebarOpen={setSidebarOpen}
           classNames={classNames}
@@ -85,6 +87,7 @@ const Layout = () => {
           navigation={navigation}
           classNames={classNames}
         />
+
         <main className="lg:pl-28 bg-[#f9fdff]">
           <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
             {/* Main area */}

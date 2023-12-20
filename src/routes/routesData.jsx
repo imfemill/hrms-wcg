@@ -1,4 +1,5 @@
 import Dashboard from "../pages/dashboard/Dashboard";
+import Profile from "../pages/profile/Profile";
 import Team from "../pages/team/Team";
 import Leaves from "../pages/leaves/Leaves";
 import Calender from "../pages/calender/Calender";
@@ -17,6 +18,11 @@ export const routesData = [
     name: "home",
     path: "/",
     element: <Dashboard />,
+  },
+  {
+    name: "profile",
+    path: "/profile",
+    element: <Profile />,
   },
   {
     name: "team",

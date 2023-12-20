@@ -13,8 +13,11 @@ const ReactTable = ({ columns, data }) => {
     data,
   });
   return (
-    <table {...getTableProps()} className="table-auto border-collapse w-full ">
-      <thead className="bg-gray-100">
+    <table
+      {...getTableProps()}
+      className="table-auto text-sm border-collapse w-full border-t-2 border-wcg_navy/70"
+    >
+      <thead className="bg-blue-100 text-wcg_navy">
         {headerGroups.map((headerGroup, i) => (
           <tr {...headerGroup.getHeaderGroupProps()} key={i}>
             {headerGroup.headers.map((column, index) => (
@@ -31,13 +34,13 @@ const ReactTable = ({ columns, data }) => {
           return (
             <tr
               {...row.getRowProps()}
-              className={i % 2 === 0 ? "bg-gray-200" : "bg-gray-100"}
+              className={i % 2 === 0 ? "bg-blue-50" : "bg-blue-100"}
               key={i}
             >
               {row.cells.map((cell, index) => (
                 <td
                   {...cell.getCellProps()}
-                  className=" p-2 text-center font-light"
+                  className=" p-2 text-center"
                   key={index}
                 >
                   {cell.render("Cell")}
