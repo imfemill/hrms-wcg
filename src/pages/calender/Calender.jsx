@@ -1,20 +1,32 @@
-import CalenderImage from "../../assets/calender.svg";
-
+import moment from "moment";
+import { Calendar, momentLocalizer } from "react-big-calendar";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import "./calender.css";
+import CustomToolbar from "./CustomToolbar";
+// import 'react-calendar/dist/Calendar.css';
 const Calender = () => {
+  const localizer = momentLocalizer(moment);
   return (
-    <div className="bg-opacity-50 flex items-center justify-center">
-      <div className="select-none max-lg:m-1 lg:w-2/3 flex shadow-2xl rounded-lg">
-        <div className="lg:w-1/2 p-10 bg-[#fefefe] flex justify-center items-center rounded-l-lg">
-          <div className="my-14">
-            <h1 className="text-3xl flex font-semibold text-wcg_blue">
-              Calender
-            </h1>
-          </div>
-        </div>
-        <div className="lg:w-1/2 bg-wcg_blue flex justify-center items-center p-10 rounded-r-lg">
-          <img src={CalenderImage} alt="calender" />
-        </div>
-      </div>
+    <div
+      /* style={{ height: 700 ,width:"90%" }} */ className="h-[500px] w-9/10 flex justify-end p-10 "
+    >
+      <div></div>
+      <Calendar
+        // events={events}
+        step={60}
+        localizer={localizer}
+        // views={allViews}
+        defaultDate={new Date(2015, 3, 1)}
+        popup={false}
+        onSelectSlot={(slotInfo) => {
+          console.log(slotInfo);
+        }}
+        onShowMore={(events) => this.setState({ showModal: true, events })}
+        components={{
+          // event: Event,
+          toolbar: CustomToolbar,
+        }}
+      />
     </div>
   );
 };

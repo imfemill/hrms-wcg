@@ -1,0 +1,77 @@
+.rbc-header {
+  background: #fff;
+  color: black;
+  padding: 10px;
+  font-size: 12px;
+  border: none !important;
+}
+
+.rbc-event {
+  padding: 0px !important;
+  border-radius: 0px !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.rbc-background-event {
+  padding: 0px !important;
+  border-radius: 0px !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.rbc-time-slot {
+  background-color: #eaf3fa;
+  color: #74a4c3;
+  border-color: aqua !important;
+}
+
+.rbc-event-label {
+  display: none !important;
+}
+
+.rbc-events-container {
+  width: 100% !important;
+}
+
+.rbc-timeslot-group {
+  min-height: 120px !important;
+}
+
+.rbc-day-bg {
+  border: none !important;
+}
+
+.rbc-month-row {
+  border: none !important;
+}
+
+.rbc-button-link {
+  font-size: 18px;
+  width: 48px;
+  height: 48px;
+  border-radius: inherit;
+  padding: 10px;
+  /* border: 1px #79b8e4 solid; */
+  /* background-color: #ffccac !important; */
+}
+
+.rbc-month-view {
+  border: none !important;
+  min-width: 500px;
+}
+
+.rbc-row-content .rbc-row {
+  height: 100%;
+  width: 100%;
+}
+
+.rbc-off-range-bg {
+  background-color: #fff;
+}
+
+.rbc-date-cell {
+  text-align: center;
+
+  border-radius: 100%;
+}

@@ -67,7 +67,7 @@ export default function Sidebar({
                     </div>
                   </Transition.Child>
 
-                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white pr-6 pb-2 ring-1 ring-white/10">
+                  <div className="flex grow flex-col gap-y-5 overflow-y-visible bg-white pr-6 pb-2 ring-1 ring-white/10">
                     <div className="flex h-16 shrink-0 items-center">
                       <img
                         className="h-8 w-auto"
@@ -87,11 +87,11 @@ export default function Sidebar({
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:w-16 xl:!w-72 lg:hover:w-[20%] lg:overflow-y-auto lg:bg-white lg:pb-4 transition-all">
-          <div className="flex h-20 shrink-0 items-center pl-[12%]">
+        <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:!w-28 lg:overflow-y-hidden lg:bg-white transition-all">
+          <div className="flex h-20 shrink-0 items-center justify-center">
             <div className="w-4/6  border-b-4 border-wcg_orange pb-2">
               <span
-                className="font-bold text-wcg_blue text-3xl cursor-pointer"
+                className="font-bold text-wcg_blue lg:text-3xl cursor-pointer"
                 onClick={() => nav("/")}
               >
                 HRMS
