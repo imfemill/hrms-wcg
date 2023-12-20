@@ -17,13 +17,11 @@ const Calender = () => {
         localizer={localizer}
         // views={allViews}
         defaultDate={new Date(2015, 3, 1)}
-        popup={false}    
+        popup={false}
         onSelectSlot={(slotInfo) => {
-          console.log(slotInfo)
-      }}
-        onShowMore={(events, date) =>
-          this.setState({ showModal: true, events })
-        }
+          console.log(slotInfo);
+        }}
+        onShowMore={(events) => this.setState({ showModal: true, events })}
         components={{
           // event: Event,
           toolbar: CustomToolbar,

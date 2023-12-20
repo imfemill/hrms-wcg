@@ -1,4 +1,3 @@
-
 .rbc-header {
   background: #fff;
   color: black;
@@ -59,7 +58,7 @@
 
 .rbc-month-view {
   border: none !important;
-  min-width:500px ; 
+  min-width: 500px;
 }
 
 .rbc-row-content .rbc-row {
