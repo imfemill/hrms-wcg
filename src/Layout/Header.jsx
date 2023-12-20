@@ -13,8 +13,8 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
 
   return (
     <>
-      <div className="lg:pl-14 xl:pl-[14%]">
-        <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center p-10 sm:gap-x-6 sm:px-6 lg:px-8">
+      <div className="lg:pl-28">
+        <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center bg-[#f9fdff] p-10 sm:gap-x-6 sm:px-6 lg:px-8">
           <Greetings />
           <button
             type="button"
