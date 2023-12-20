@@ -27,12 +27,14 @@ export default function SidebarMenu({ navigation, classNames }) {
               onClick={() => setActive(item.name)}
             >
               <span
-                onClick={() => nav(item.href)}
+                onClick={() => {
+                  !item.children && nav(item.href);
+                }}
                 className={classNames(
                   item.href === pathname
                     ? "bg-blue-50 text-wcg_blue rounded-r-lg border-wcg_navy border-l-4"
                     : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50 ",
-                  "cursor-pointer rounded-r-md text-xs font-medium p-2.5 text-center w-full justify-center relative",
+                  "cursor-pointer rounded-r-md text-xs font-medium p-2.5 text-center w-full justify-center relative"
                 )}
               >
                 <div className="flex lg:flex-col items-center lg:justify-center gap-x-2 ">
@@ -60,7 +62,7 @@ export default function SidebarMenu({ navigation, classNames }) {
                                 open === item.name
                                   ? "bg-blue-50 text-wcg_blue  border-l-4 border-wcg_blue"
                                   : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50",
-                                "group cursor-pointer px-2 gap-x-3 rounded-r-md p-2 text-sm leading-6 font-semibold w-full",
+                                "group cursor-pointer px-2 gap-x-3 rounded-r-md p-2 text-sm leading-6 font-semibold w-full"
                               )}
                             >
                               <div className="flex">
