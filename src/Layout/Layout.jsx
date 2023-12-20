@@ -26,13 +26,13 @@ const navigation = [
     children: [
       {
         name: "My Leaves",
-        href: "/leaves/myleave",
+        href: "/leaves",
         icon: ChartPieIcon,
         current: false,
       },
       {
         name: "Create Leave",
-        href: "/leaves/createleave",
+        href: "/leaves/create",
         icon: ChartPieIcon,
         current: false,
       },
@@ -87,7 +87,6 @@ const Layout = () => {
           navigation={navigation}
           classNames={classNames}
         />
-
         <main className="lg:pl-28 bg-[#f9fdff]">
           <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
             {/* Main area */}

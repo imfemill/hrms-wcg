@@ -1,18 +1,17 @@
 import { ChartPieIcon, ChevronLeftIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function SidebarMenu({ navigation, classNames }) {
-  const [open, setopen] = useState(null); // dropdown open/close
-  // const [menu, setMenu] = useState(null); // button child menu
+  const [open, setOpen] = useState(null); // dropdown open/close
   const nav = useNavigate();
   const { pathname } = useLocation();
 
   function setActive(value) {
     if (open === value) {
-      setopen(null);
+      setOpen(null);
     } else {
-      setopen(value);
+      setOpen(value);
     }
   }
 
@@ -55,8 +54,8 @@ export default function SidebarMenu({ navigation, classNames }) {
                       >
                         {item?.children?.map((childItem) => (
                           <li key={childItem?.name} className="flex">
-                            <Link
-                              to={"/"}
+                            <div
+                              onClick={() => nav(childItem?.href)}
                               className={classNames(
                                 open === item.name
                                   ? "bg-blue-50 text-wcg_blue  border-l-4 border-wcg_blue"
@@ -73,7 +72,7 @@ export default function SidebarMenu({ navigation, classNames }) {
                                   {childItem.name}
                                 </span>
                               </div>
-                            </Link>
+                            </div>
                           </li>
                         ))}
                       </ul>

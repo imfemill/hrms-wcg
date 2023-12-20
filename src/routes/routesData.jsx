@@ -11,6 +11,7 @@ import MyInvestments from "../pages/myInvestments/MyInvestments";
 
 import PasswordResetForm from "../pages/passwordReset/PasswordReset";
 import SignIn from "../pages/signIn/SignIn";
+import CreateLeave from "../pages/leaves/CreateLeave";
 
 export const routesData = [
   // Authenticate require as per need
@@ -33,6 +34,11 @@ export const routesData = [
     name: "leaves",
     path: "/leaves",
     element: <Leaves />,
+  },
+  {
+    name: "create leave",
+    path: "/leaves/create",
+    element: <CreateLeave />,
   },
   {
     name: "calender",
