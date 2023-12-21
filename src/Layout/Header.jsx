@@ -1,7 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AddressBar } from "../components/breadCrumb/BredCrumb";
 import Greetings from "../components/greetings/Greeitngs";
@@ -9,6 +9,8 @@ import { Avatar } from "../components/avatar/Avatar";
 
 export default function Header({ setSidebarOpen, classNames, userNavigation }) {
   const nav = useNavigate();
+  const [expanded, setExpanded] = useState(false);
+  const [rotate, setRotate] = useState("transform duration-700 ease rotate-0");
   var name = "Femil Patodiya";
 
   return (
@@ -47,7 +49,17 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
                 <Menu.Button className="-m-1.5 flex items-center p-1.5">
                   <span className="sr-only">Open user menu</span>
                   <Avatar name={name} className={""} />
-                  <span className="hidden lg:flex lg:items-center">
+                  <span
+                    className="hidden lg:flex lg:items-center"
+                    onClick={() => {
+                      setExpanded((prevState) => !prevState);
+                      setRotate(
+                        expanded
+                          ? "transform duration-500 ease rotate-0"
+                          : "transform duration-500 ease rotate-180",
+                      );
+                    }}
+                  >
                     <span
                       className="ml-4 text-sm font-semibold leading-6 text-wcg_navy/70"
                       aria-hidden="true"
@@ -55,7 +67,7 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
                       {name}
                     </span>
                     <ChevronDownIcon
-                      className="ml-2 h-5 w-5 text-wcg_navy/70 hover:text-wcg_blue"
+                      className={`ml-2 h-5 w-5 text-wcg_navy/70 hover:text-wcg_blue ${rotate}`}
                       aria-hidden="true"
                     />
                   </span>
