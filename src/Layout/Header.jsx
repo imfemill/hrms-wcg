@@ -49,13 +49,17 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
                 <Menu.Button className="-m-1.5 flex items-center p-1.5">
                   <span className="sr-only">Open user menu</span>
                   <Avatar name={name} className={""} />
-                  <span className="hidden lg:flex lg:items-center" onClick={() => {
-                    setExpanded((prevState) => !prevState); setRotate(
-                      expanded
-                        ? "transform duration-500 ease rotate-0"
-                        : "transform duration-500 ease rotate-180",
-                    )
-                  }}>
+                  <span
+                    className="hidden lg:flex lg:items-center"
+                    onClick={() => {
+                      setExpanded((prevState) => !prevState);
+                      setRotate(
+                        expanded
+                          ? "transform duration-500 ease rotate-0"
+                          : "transform duration-500 ease rotate-180",
+                      );
+                    }}
+                  >
                     <span
                       className="ml-4 text-sm font-semibold leading-6 text-wcg_navy/70"
                       aria-hidden="true"
@@ -105,7 +109,7 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
             </div>
           </div>
         </div>
-      </div >
+      </div>
     </>
   );
 }
