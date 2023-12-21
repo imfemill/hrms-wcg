@@ -75,3 +75,8 @@
 
   border-radius: 100%;
 }
+
+.rbc-current {
+  color: brown;
+  font-weight: 600;
+}
