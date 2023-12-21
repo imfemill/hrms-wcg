@@ -17,17 +17,20 @@ const Card = ({ widget }) => {
     setRotate(
       expanded
         ? "transform duration-500 ease rotate-45"
-        : "transform duration-500 ease rotate-480",
+        : "transform duration-500 ease rotate-480"
     );
   };
 
   return (
     <div className="shadow-xl shadow-wcg_navy/20 p-5 block h-fit w-4/5 rounded-lg bg-blue-50">
-      <div className="flex gap-0 justify-between px-5 py-4 rounded-t-lg">
+      <div
+        className="flex gap-0 justify-between px-5 py-4 rounded-t-lg"
+        onClick={() => toggleAccordion()}
+      >
         <div className="text-lg font-semibold text-wcg_blue hover:text-wcg_navy border-b-2 border-wcg_orange">
           {widget?.title}
         </div>
-        <div onClick={() => toggleAccordion()} className="cursor-pointer">
+        <div className="cursor-pointer">
           <img
             src={openCloseIcon}
             alt="leaves"
