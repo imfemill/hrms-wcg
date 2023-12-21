@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Outlet } from "react-router";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import { AddressBar } from "../components/breadCrumb/BredCrumb";
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: HomeIcon, current: true },
@@ -88,6 +89,7 @@ const Layout = () => {
           classNames={classNames}
         />
         <main className="lg:pl-28 bg-[#f9fdff]">
+          <AddressBar />
           <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
             {/* Main area */}
             <Outlet />

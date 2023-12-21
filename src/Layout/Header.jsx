@@ -3,9 +3,8 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
 import { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AddressBar } from "../components/breadCrumb/BredCrumb";
-import Greetings from "../components/greetings/Greeitngs";
 import { Avatar } from "../components/avatar/Avatar";
+import Greetings from "../components/greetings/Greeitngs";
 
 export default function Header({ setSidebarOpen, classNames, userNavigation }) {
   const nav = useNavigate();
@@ -17,7 +16,6 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
     <>
       <div className="lg:pl-28">
         <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center bg-[#f9fdff] p-10 sm:gap-x-6 sm:px-6 lg:px-8">
-          <Greetings />
           <button
             type="button"
             className="-m-2.5 p-2.5 text-gray-700 lg:hidden"
@@ -26,7 +24,7 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
             <span className="sr-only">Open sidebar</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
-          <AddressBar />
+          <Greetings />
 
           <div className="flex flex-1 justify-end gap-x-4 self-stretch lg:gap-x-6">
             <div className="flex items-center gap-x-4 lg:gap-x-6">
