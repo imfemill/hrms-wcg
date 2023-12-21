@@ -1,7 +1,7 @@
 import { useTable } from "react-table";
 
 // eslint-disable-next-line react/prop-types
-const ReactTable = ({ columns, data }) => {
+const ReactTable = ({ columns, data, type }) => {
   const {
     getTableProps, // table props from react-table
     getTableBodyProps, // table body props from react-table
@@ -34,7 +34,7 @@ const ReactTable = ({ columns, data }) => {
           return (
             <tr
               {...row.getRowProps()}
-              className={i % 2 === 0 ? "bg-blue-50" : "bg-blue-100"}
+              className={type === "TODAYS_LEAVES" ? "bg-blue-50" : i % 2 === 0 ? "bg-blue-50" : "bg-blue-100"}
               key={i}
             >
               {row.cells.map((cell, index) => (
