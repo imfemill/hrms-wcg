@@ -17,7 +17,7 @@ const Card = ({ widget }) => {
     setRotate(
       expanded
         ? "transform duration-500 ease rotate-45"
-        : "transform duration-500 ease rotate-480"
+        : "transform duration-500 ease rotate-480",
     );
   };
 
