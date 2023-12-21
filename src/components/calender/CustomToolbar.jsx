@@ -1,4 +1,3 @@
-
 const CustomToolbar = ({ date, onNavigate }) => {
   const handleNavigate = (action) => {
     onNavigate(action);
