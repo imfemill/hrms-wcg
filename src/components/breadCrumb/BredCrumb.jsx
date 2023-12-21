@@ -35,14 +35,18 @@ export function AddressBar() {
                       >
                         <span
                           key={segment}
-                          className={`hover:text-wcg_navy/80 rounded-full ${i + 2 === pathname.split("/").length && "text-wcg_navy/90"}`}
+                          className={`hover:text-wcg_navy/80 rounded-full ${
+                            i + 2 === pathname.split("/").length &&
+                            "text-wcg_navy/90"
+                          }`}
                         >
                           {segment.split("-").join(" ") || "Dashboard"}
                         </span>
                       </span>
-                      {
-                        pathname.split("/").length > 2 && i + 2 !== pathname.split("/").length && <ChevronRightIcon className="w-6 h-6 cursor-pointer" />
-                      }
+                      {pathname.split("/").length > 2 &&
+                        i + 2 !== pathname.split("/").length && (
+                          <ChevronRightIcon className="w-6 h-6 cursor-pointer" />
+                        )}
                     </>
                   </React.Fragment>
                 );

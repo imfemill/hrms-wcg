@@ -1,23 +1,23 @@
 [
-    {
-        "name": "Femil Patodiya",
-        "from": "22-12-2023 (Wed)",
-        "to": "27-12-2023 (Wed)",
-        "days": 3,
-        "type": "Casual"
-    },
-    {
-        "name": "Milan Gojiya",
-        "from": "22-12-2023 (Fri)",
-        "to": "26-12-2023 (Tues)",
-        "days": 2,
-        "type": "Casual"
-    },
-    {
-        "name": "Krunal Bhuvad",
-        "from": "22-12-2023 (Fri)",
-        "to": "22-12-2023 (Fri)",
-        "days": 1,
-        "type": "Medical"
-    }
+  {
+    "name": "Femil Patodiya",
+    "from": "22-12-2023 (Wed)",
+    "to": "27-12-2023 (Wed)",
+    "days": 3,
+    "type": "Casual"
+  },
+  {
+    "name": "Milan Gojiya",
+    "from": "22-12-2023 (Fri)",
+    "to": "26-12-2023 (Tues)",
+    "days": 2,
+    "type": "Casual"
+  },
+  {
+    "name": "Krunal Bhuvad",
+    "from": "22-12-2023 (Fri)",
+    "to": "22-12-2023 (Fri)",
+    "days": 1,
+    "type": "Medical"
+  }
 ]

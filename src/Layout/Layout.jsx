@@ -89,7 +89,7 @@ const Layout = () => {
           classNames={classNames}
         />
         <main className="lg:pl-28 bg-[#f9fdff]">
-            <AddressBar />
+          <AddressBar />
           <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
             {/* Main area */}
             <Outlet />

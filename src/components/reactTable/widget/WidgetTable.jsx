@@ -34,7 +34,13 @@ const ReactTable = ({ columns, data, type }) => {
           return (
             <tr
               {...row.getRowProps()}
-              className={type === "TODAYS_LEAVES" ? "bg-blue-50" : i % 2 === 0 ? "bg-blue-50" : "bg-blue-100"}
+              className={
+                type === "TODAYS_LEAVES"
+                  ? "bg-blue-50"
+                  : i % 2 === 0
+                    ? "bg-blue-50"
+                    : "bg-blue-100"
+              }
               key={i}
             >
               {row.cells.map((cell, index) => (

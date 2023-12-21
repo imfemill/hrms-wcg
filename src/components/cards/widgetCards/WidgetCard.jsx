@@ -6,7 +6,7 @@ import { widgetColumn } from "../../reactTable/widget/widgetColumns";
 import "./card.css";
 
 const WidgetCard = ({ widget }) => {
-  const nav = useNavigate()
+  const nav = useNavigate();
   const columns = useMemo(() => widgetColumn(widget.title), [widget]);
 
   const contentSpace = useRef(null);
@@ -25,13 +25,17 @@ const WidgetCard = ({ widget }) => {
 
   return (
     <div className="shadow-xl shadow-wcg_navy/20 p-5 block h-fit w-11/12 rounded-lg bg-blue-50">
-      <div
-        className="flex gap-0 justify-between mx-5 my-4 rounded-t-lg"
-      >
-        <div onClick={() => toggleAccordion()} className="text-lg font-semibold text-wcg_blue hover:text-wcg_navy border-b-2 border-wcg_orange cursor-pointer">
+      <div className="flex gap-0 justify-between mx-5 my-4 rounded-t-lg">
+        <div
+          onClick={() => toggleAccordion()}
+          className="text-lg font-semibold text-wcg_blue hover:text-wcg_navy border-b-2 border-wcg_orange cursor-pointer"
+        >
           {widget?.title}
         </div>
-        <div className="cursor-pointer flex items-center" onClick={() => toggleAccordion()}>
+        <div
+          className="cursor-pointer flex items-center"
+          onClick={() => toggleAccordion()}
+        >
           <img
             src={openCloseIcon}
             alt="leaves"
@@ -69,15 +73,16 @@ const WidgetCard = ({ widget }) => {
         <div className="w-full">
           <ReactTable columns={columns} data={widget?.table} />
         </div>
-        {
-          widget?.type === "MORE_LEAVES" &&
+        {widget?.type === "MORE_LEAVES" && (
           <div className="my-4 w-full flex justify-end">
-            <span className="bg-wcg_navy/80 hover:bg-wcg_navy cursor-pointer rounded-lg text-wcg_lightblue p-2"
-              onClick={() => nav("/leaves")}>
+            <span
+              className="bg-wcg_navy/80 hover:bg-wcg_navy cursor-pointer rounded-lg text-wcg_lightblue p-2"
+              onClick={() => nav("/leaves")}
+            >
               View More
             </span>
           </div>
-        }
+        )}
       </div>
     </div>
   );
