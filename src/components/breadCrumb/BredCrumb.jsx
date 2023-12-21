@@ -8,7 +8,7 @@ export function AddressBar() {
 
   return (
     pathname.length > 1 && (
-      <div className="flex items-center gap-x-2 p-3.5 lg:px-5 lg:py-3 bg-wcg_blue/5 rounded-3xl text-wcg_navy/70">
+      <div className="flex items-center w-fit mx-5 gap-x-2 p-3.5 lg:px-5 lg:py-3 bg-wcg_blue/5 rounded-3xl text-wcg_navy/70">
         <>
           <div className="flex gap-x-2 text-sm font-medium justify-center items-center">
             <div onClick={() => nav("/")}>
@@ -35,11 +35,18 @@ export function AddressBar() {
                       >
                         <span
                           key={segment}
-                          className="hover:text-wcg_navy rounded-full"
+                          className={`hover:text-wcg_navy/80 rounded-full ${
+                            i + 2 === pathname.split("/").length &&
+                            "text-wcg_navy/90"
+                          }`}
                         >
                           {segment.split("-").join(" ") || "Dashboard"}
                         </span>
                       </span>
+                      {pathname.split("/").length > 2 &&
+                        i + 2 !== pathname.split("/").length && (
+                          <ChevronRightIcon className="w-6 h-6 cursor-pointer" />
+                        )}
                     </>
                   </React.Fragment>
                 );
