@@ -28,7 +28,7 @@ export default function SidebarMenu({ setSidebarOpen }) {
                         pathname === item.href
                           ? "bg-blue-50 text-wcg_blue"
                           : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50",
-                        "group flex items-center flex-row lg:flex-col gap-x-3 rounded-md p-2.5 py-3 text-xs font-semibold text-gray-400 lg:text-center cursor-pointer"
+                        "group flex items-center flex-row lg:flex-col gap-x-3 rounded-md p-2.5 py-3 text-xs font-semibold text-gray-400 lg:text-center cursor-pointer",
                       )}
                     >
                       <span className="flex lg:justify-center">
@@ -56,7 +56,7 @@ export default function SidebarMenu({ setSidebarOpen }) {
                               pathname.includes(item.href)
                                 ? "bg-blue-50 text-wcg_blue"
                                 : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50",
-                              " flex flex-row lg:flex-col items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-gray-400 relative outline-0"
+                              " flex flex-row lg:flex-col items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-gray-400 relative outline-0",
                             )}
                           >
                             <span className="flex lg:justify-center">
@@ -70,7 +70,7 @@ export default function SidebarMenu({ setSidebarOpen }) {
                                 open || hover
                                   ? "rotate-180 text-gray-500"
                                   : "text-gray-400",
-                                "ml-auto h-5 w-5 shrink-0 absolute right-0 lg:top-6 rotate-10 transition-all duration-200"
+                                "ml-auto h-5 w-5 shrink-0 absolute right-0 lg:top-6 rotate-10 transition-all duration-200",
                               )}
                               aria-hidden="true"
                             />
@@ -99,7 +99,7 @@ export default function SidebarMenu({ setSidebarOpen }) {
                                       pathname === subItem.href
                                         ? "bg-blue-50 text-wcg_blue border-l-4 border-wcg_blue"
                                         : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50 hover:border-l-4 border-wcg_blue",
-                                      "group cursor-pointer flex gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold w-36 m-2"
+                                      "group cursor-pointer flex gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold w-36 m-2",
                                     )}
                                   >
                                     <span className="flex">

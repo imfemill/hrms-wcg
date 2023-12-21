@@ -67,7 +67,7 @@ export default function Header({ setSidebarOpen }) {
                       setRotate(
                         expanded
                           ? "transform duration-500 ease rotate-0"
-                          : "transform duration-500 ease rotate-180"
+                          : "transform duration-500 ease rotate-180",
                       );
                     }}
                   >
@@ -102,7 +102,7 @@ export default function Header({ setSidebarOpen }) {
                               active
                                 ? "bg-blue-50 text-wcg_blue border-l-4 border-wcg_blue"
                                 : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50",
-                              "group cursor-pointer flex gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold "
+                              "group cursor-pointer flex gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold ",
                             )}
                           >
                             <item.icon
