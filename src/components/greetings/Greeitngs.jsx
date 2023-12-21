@@ -5,13 +5,13 @@
 const Greetings = () => {
   var today = new Date();
   var hourNow = today.getHours();
-  var name = "Femil";
+  var name = "Krunal";
 
   return (
     <span className="text-3xl max-lg:text-lg font-medium text-wcg_blue flex">
       {hourNow < 12
         ? `Good morning, ${name}!`
-        : hourNow < 20
+        : hourNow < 16
           ? `Good afternoon, ${name}!`
           : hourNow < 24
             ? `Good evening, ${name}!`
