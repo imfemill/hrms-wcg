@@ -1,16 +1,27 @@
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowRightOnRectangleIcon,
+  Bars3Icon,
+  BellIcon,
+  UserCircleIcon,
+} from "@heroicons/react/24/outline";
 import { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Avatar } from "../components/avatar/Avatar";
 import Greetings from "../components/greetings/Greeitngs";
+import { classNames } from "../utiles/util";
 
-export default function Header({ setSidebarOpen, classNames, userNavigation }) {
+export default function Header({ setSidebarOpen }) {
   const nav = useNavigate();
   const [expanded, setExpanded] = useState(false);
   const [rotate, setRotate] = useState("transform duration-700 ease rotate-0");
-  var name = "Femil Patodiya";
+  var name = "Krunal Bhuvad";
+
+  const userNavigation = [
+    { name: "Profile", href: "/profile", icon: UserCircleIcon },
+    { name: "Sign out", href: "/signin", icon: ArrowRightOnRectangleIcon },
+  ];
 
   return (
     <>
