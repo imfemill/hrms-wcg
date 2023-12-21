@@ -4,13 +4,9 @@ import { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import SidebarMenu from "./SidebarMenu";
 
-export default function Sidebar({
-  setSidebarOpen,
-  sidebarOpen,
-  navigation,
-  classNames,
-}) {
+export default function Sidebar({ setSidebarOpen, sidebarOpen }) {
   const nav = useNavigate();
+
   return (
     <>
       <div>
@@ -69,16 +65,16 @@ export default function Sidebar({
 
                   <div className="flex grow flex-col gap-y-5 overflow-y-visible bg-white pr-6 pb-2 ring-1 ring-white/10">
                     <div className="flex h-16 shrink-0 items-center">
-                      <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                        alt="Your Company"
-                      />
+                      <div className="w-16 ml-1 border-b-4 border-wcg_orange pb-2">
+                        <span
+                          className="font-bold text-wcg_blue ml-2 text-3xl cursor-pointer"
+                          onClick={() => nav("/")}
+                        >
+                          HRMS
+                        </span>
+                      </div>
                     </div>
-                    <SidebarMenu
-                      navigation={navigation}
-                      classNames={classNames}
-                    />
+                    <SidebarMenu setSidebarOpen={setSidebarOpen} />
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
@@ -89,7 +85,7 @@ export default function Sidebar({
         {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:!w-28 lg:overflow-y-hidden lg:bg-white transition-all">
           <div className="flex h-20 shrink-0 items-center justify-center">
-            <div className="w-4/6  border-b-4 border-wcg_orange pb-2">
+            <div className="w-16 border-b-4 border-wcg_orange pb-2">
               <span
                 className="font-bold text-wcg_blue lg:text-3xl cursor-pointer"
                 onClick={() => nav("/")}
@@ -98,7 +94,7 @@ export default function Sidebar({
               </span>
             </div>
           </div>
-          <SidebarMenu navigation={navigation} classNames={classNames} />
+          <SidebarMenu setSidebarOpen={setSidebarOpen} />
         </div>
       </div>
     </>

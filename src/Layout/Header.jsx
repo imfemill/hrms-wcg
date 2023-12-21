@@ -1,17 +1,28 @@
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowRightOnRectangleIcon,
+  Bars3Icon,
+  BellIcon,
+  UserCircleIcon,
+} from "@heroicons/react/24/outline";
 import { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Avatar } from "../components/avatar/Avatar";
 import { AddressBar } from "../components/breadCrumb/BredCrumb";
 import Greetings from "../components/greetings/Greeitngs";
-import { Avatar } from "../components/avatar/Avatar";
+import { classNames } from "../utiles/util";
 
-export default function Header({ setSidebarOpen, classNames, userNavigation }) {
+export default function Header({ setSidebarOpen }) {
   const nav = useNavigate();
   const [expanded, setExpanded] = useState(false);
   const [rotate, setRotate] = useState("transform duration-700 ease rotate-0");
-  var name = "Femil Patodiya";
+  var name = "Krunal Bhuvad";
+
+  const userNavigation = [
+    { name: "Profile", href: "/profile", icon: UserCircleIcon },
+    { name: "Sign out", href: "/signin", icon: ArrowRightOnRectangleIcon },
+  ];
 
   return (
     <>
@@ -56,7 +67,7 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
                       setRotate(
                         expanded
                           ? "transform duration-500 ease rotate-0"
-                          : "transform duration-500 ease rotate-180",
+                          : "transform duration-500 ease rotate-180"
                       );
                     }}
                   >
@@ -91,7 +102,7 @@ export default function Header({ setSidebarOpen, classNames, userNavigation }) {
                               active
                                 ? "bg-blue-50 text-wcg_blue border-l-4 border-wcg_blue"
                                 : "text-gray-400 hover:text-wcg_blue hover:bg-blue-50",
-                              "group cursor-pointer flex gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold ",
+                              "group cursor-pointer flex gap-x-3 rounded-r-md p-2.5 text-sm leading-6 font-semibold "
                             )}
                           >
                             <item.icon
