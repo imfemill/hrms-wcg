@@ -7,7 +7,7 @@ export function AddressBar() {
   const { pathname } = useLocation();
 
   return (
-    pathname.length > 1 && (
+    pathname.length > 0 && (
       <div className="flex items-center w-fit mx-5 gap-x-2 p-3.5 lg:px-5 lg:py-3 bg-wcg_blue/5 rounded-3xl text-wcg_navy/70">
         <>
           <div className="flex gap-x-2 text-sm font-medium justify-center items-center">
