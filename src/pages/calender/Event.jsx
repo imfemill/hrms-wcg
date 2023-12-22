@@ -1,4 +1,4 @@
-import  { useMemo } from "react";
+import { useMemo } from "react";
 import ReactTable from "../../components/reactTable/widget/WidgetTable";
 
 const Event = ({ showEvent }) => {
@@ -10,7 +10,7 @@ const Event = ({ showEvent }) => {
         accessor: "title",
       },
     ],
-    []
+    [],
   );
   return (
     <>

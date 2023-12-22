@@ -5,8 +5,7 @@ import CustomToolbar from "./CustomToolbar";
 import "./calender.css";
 import events from "./events";
 const localizer = momentLocalizer(moment);
-const CustomCalender = ({  currentDate, setCurrentDate ,setShowEvent}) => {
-
+const CustomCalender = ({ currentDate, setCurrentDate, setShowEvent }) => {
   const handleNavigate = (action) => {
     // action can be 'PREV', 'NEXT', or 'TODAY'
     console.log(action);
@@ -30,25 +29,23 @@ const CustomCalender = ({  currentDate, setCurrentDate ,setShowEvent}) => {
     console.log(currentDate);
   };
 
-
   const handleSelectSlot = (slotInfo) => {
-    const selectedDay = moment(slotInfo.start).format('YYYY-MM-DD');
+    const selectedDay = moment(slotInfo.start).format("YYYY-MM-DD");
 
     // Check if there are any events on the selected day
     const eventsOnSelectedDay = events.filter(
       (event) =>
-        moment(event.start).format('YYYY-MM-DD') === selectedDay ||
-        moment(event.end).format('YYYY-MM-DD') === selectedDay
+        moment(event.start).format("YYYY-MM-DD") === selectedDay ||
+        moment(event.end).format("YYYY-MM-DD") === selectedDay,
     );
 
     if (eventsOnSelectedDay.length > 0) {
-      console.log('Events on selected day:', eventsOnSelectedDay);
-      setShowEvent(eventsOnSelectedDay)
+      console.log("Events on selected day:", eventsOnSelectedDay);
+      setShowEvent(eventsOnSelectedDay);
     } else {
-      console.log('No events on selected day');
+      console.log("No events on selected day");
     }
   };
- 
 
   return (
     <div className="h-[500px] w-9/10  p-10 ">
@@ -71,13 +68,10 @@ const CustomCalender = ({  currentDate, setCurrentDate ,setShowEvent}) => {
               currentDate={currentDate}
             />
           ),
-         
-
         }}
-
         selectable={true}
         startAccessor="start"
-        endAccessor="end" 
+        endAccessor="end"
         onDoubleClickEvent={(event) => {
           console.log(event);
         }}

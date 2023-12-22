@@ -53,7 +53,9 @@
   clip-path: polygon(0% 0%, 80% 0, 90% 50%, 80% 100%, 0% 100%);
 
   border-radius: 5px;
-  background-color: rgb(219 234 254 / var(--tw-bg-opacity)); /* Set a different background color for the active slide */
+  background-color: rgb(
+    219 234 254 / var(--tw-bg-opacity)
+  ); /* Set a different background color for the active slide */
   color: #1d3d03; /* Set text color for the active slide */
 }
 
