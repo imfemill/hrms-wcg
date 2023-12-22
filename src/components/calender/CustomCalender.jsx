@@ -4,22 +4,49 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import CustomToolbar from "./CustomToolbar";
 import "./calender.css";
 import events from "./events";
-import { useState } from "react";
-const CustomCalender = ({ date }) => {
-  const [currentDate, setCurrentDate] = useState(new Date());
-
-  const localizer = momentLocalizer(moment);
+const localizer = momentLocalizer(moment);
+const CustomCalender = ({ currentDate, setCurrentDate, setShowEvent }) => {
   const handleNavigate = (action) => {
     // action can be 'PREV', 'NEXT', or 'TODAY'
     console.log(action);
-    setCurrentDate((prevDate) =>
-      moment(prevDate).add(action, "month").toDate(),
-    );
+    let newDate;
+
+    switch (action) {
+      case "PREV":
+        newDate = moment(currentDate).subtract(1, "month").toDate();
+        break;
+      case "TODAY":
+        newDate = new Date();
+        break;
+      case "NEXT":
+        newDate = moment(currentDate).add(1, "month").toDate();
+        break;
+      default:
+        newDate = currentDate;
+    }
+
+    setCurrentDate(newDate);
+    console.log(currentDate);
   };
 
-  //   const handleViewChange = (view) => {
-  //     setCurrentView(view);
-  //   };
+  const handleSelectSlot = (slotInfo) => {
+    const selectedDay = moment(slotInfo.start).format("YYYY-MM-DD");
+
+    // Check if there are any events on the selected day
+    const eventsOnSelectedDay = events.filter(
+      (event) =>
+        moment(event.start).format("YYYY-MM-DD") === selectedDay ||
+        moment(event.end).format("YYYY-MM-DD") === selectedDay,
+    );
+
+    if (eventsOnSelectedDay.length > 0) {
+      console.log("Events on selected day:", eventsOnSelectedDay);
+      setShowEvent(eventsOnSelectedDay);
+    } else {
+      console.log("No events on selected day");
+    }
+  };
+
   return (
     <div className="h-[500px] w-9/10  p-10 ">
       <Calendar
@@ -29,23 +56,16 @@ const CustomCalender = ({ date }) => {
         }}
         step={60}
         localizer={localizer}
-        // views={allViews}
-        date={new Date(date.year, date.month, date.day)}
-        defaultDate={new Date(date.year, date.month, date.day)}
-        popup={false}
-        onSelectSlot={(slotInfo) => {
-          console.log(slotInfo.action);
-        }}
+        date={currentDate} // Update this line
+        // popup={false}
+        onSelectSlot={handleSelectSlot}
         onShowMore={(events) => this.setState({ showModal: true, events })}
         components={{
-          //   event: Event,
           toolbar: (props) => (
             <CustomToolbar
               {...props}
               onNavigate={handleNavigate}
-              //   onViewChange={handleViewChange}
               currentDate={currentDate}
-              //   currentView={currentView}
             />
           ),
         }}
