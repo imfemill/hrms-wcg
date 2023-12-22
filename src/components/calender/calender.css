@@ -1,5 +1,5 @@
 .rbc-header {
-  background: #fff;
+  background:  #eaf3fa;
   color: black;
   padding: 10px;
   font-size: 12px;
@@ -7,10 +7,11 @@
 }
 
 .rbc-event {
-  padding: 0px !important;
-  border-radius: 0px !important;
-  border: none !important;
-  background-color: transparent !important;
+  /* padding: 0px !important; */
+  /* border-radius: 0px !important; */
+  /* border: none !important; */
+  /* background-color: transparent !important; */
+  margin-bottom: 5px;
 }
 
 .rbc-background-event {
@@ -48,12 +49,13 @@
 
 .rbc-button-link {
   font-size: 18px;
-  width: 48px;
-  height: 48px;
+  /* width: 48px;
+  height: 48px; */
   border-radius: inherit;
-  padding: 10px;
-  /* border: 1px #79b8e4 solid; */
-  /* background-color: #ffccac !important; */
+  pointer-events: none; 
+
+  /* padding: 10px; */
+  
 }
 
 .rbc-month-view {
@@ -61,13 +63,13 @@
   min-width: 500px;
 }
 
-.rbc-row-content .rbc-row {
+/* .rbc-row-content .rbc-row {
   height: 100%;
   width: 100%;
-}
+} */
 
 .rbc-off-range-bg {
-  background-color: #fff;
+  background-color: rgb(249 253 255 / var(--tw-bg-opacity));
 }
 
 .rbc-date-cell {

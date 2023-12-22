@@ -2,22 +2,22 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import CustomCalender from "../../components/calender/CustomCalender";
 import VerticalCarousel from "./VerticalCarousel";
 import { useState } from "react";
+import Event from "./Event";
 // import 'react-calendar/dist/Calendar.css';
 const Calender = () => {
-  const [date, setDate] = useState({
-    day: String(new Date().getDate()).padStart(2, "0"),
-    month: String(new Date().getMonth() + 1).padStart(2, "0"),
-    year: new Date().getFullYear(),
-  });
+  
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [showEvent, setShowEvent] = useState([])
   return (
-    <div className="flex justify-evenly p-10 ">
+    <div className="flex justify-evenly p-10  ">
       <div>
-        <VerticalCarousel setDate={setDate} date={date} />
+        <VerticalCarousel currentDate={currentDate}  setCurrentDate={setCurrentDate} />
       </div>
       <div>
         {" "}
-        <CustomCalender date={date} />{" "}
+        <CustomCalender  currentDate={currentDate}  setCurrentDate={setCurrentDate} setShowEvent={setShowEvent} />{" "}
       </div>
+        <div className="w-[300px] bor"> <Event  showEvent={showEvent}/> </div>
     </div>
   );
 };
