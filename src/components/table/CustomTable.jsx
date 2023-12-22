@@ -68,7 +68,7 @@ export default function CustomTable() {
         Action: "",
       },
     ],
-    []
+    [],
   );
 
   const columns = useMemo(
@@ -85,7 +85,7 @@ export default function CustomTable() {
       { Header: "Leave End", accessor: "leaveEnd" },
       { Header: "Action", accessor: "", disableSortBy: true },
     ],
-    []
+    [],
   );
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
@@ -94,7 +94,7 @@ export default function CustomTable() {
         columns,
         data,
       },
-      useSortBy
+      useSortBy,
     );
 
   const generateSortingIndicator = (column) => {
