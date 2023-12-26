@@ -46,12 +46,12 @@ export default function SidebarMenu({ setSidebarOpen }) {
                       onMouseOver={() => setHover(true)}
                       onMouseLeave={() => {
                         setHover(false);
-                        close();
                       }}
                     >
                       {({ open, close }) => (
                         <>
                           <Disclosure.Button
+                            disabled
                             className={classNames(
                               pathname.includes(item.href)
                                 ? "bg-blue-50 text-wcg_blue"
@@ -94,7 +94,7 @@ export default function SidebarMenu({ setSidebarOpen }) {
                                 >
                                   {/* 44px */}
                                   <Disclosure.Button
-                                    as="div"
+                                    as="ul"
                                     className={classNames(
                                       pathname === subItem.href
                                         ? "bg-blue-50 text-wcg_blue border-l-4 border-wcg_blue"
