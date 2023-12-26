@@ -12,7 +12,7 @@ export default function CustomTable({ columns, data }) {
     return rows.filter(
       (row) =>
         row.values["leaveStart"]?.includes(fomateDate(query?.startDate)) &&
-        row.values["leaveEnd"]?.includes(fomateDate(query?.endDate))
+        row.values["leaveEnd"]?.includes(fomateDate(query?.endDate)),
     );
   }, []);
 
@@ -24,7 +24,7 @@ export default function CustomTable({ columns, data }) {
     },
     useGlobalFilter,
     useFilters,
-    useSortBy
+    useSortBy,
   );
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
