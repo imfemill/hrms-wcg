@@ -4,11 +4,10 @@
   padding: 10px;
   font-size: 16px;
   border: none !important;
-  border-bottom: 1px solid #205375 ;
+  border-bottom: 1px solid #205375;
 }
-.rbc-month-header{
-  border-bottom: 1px solid #205375 ;
-
+.rbc-month-header {
+  border-bottom: 1px solid #205375;
 }
 .rbc-event {
   /* padding: 0px !important; */
@@ -25,8 +24,8 @@
   background-color: transparent !important;
 }
 
-.rbc-row-bg{
-  border-bottom: 1px solid #205375 ;
+.rbc-row-bg {
+  border-bottom: 1px solid #205375;
 }
 
 .rbc-time-slot {
@@ -90,12 +89,12 @@
   font-weight: 600;
 }
 
-.rbc-row-segment{
+.rbc-row-segment {
   pointer-events: none;
 }
 
-.rbc-row-segment{
+.rbc-row-segment {
   /* display: none; */
-  height: 10PX;
-  font-size:0px;
+  height: 10px;
+  font-size: 0px;
 }

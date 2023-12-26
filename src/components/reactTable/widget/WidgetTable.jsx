@@ -13,7 +13,7 @@ const ReactTable = ({ columns, data, type }) => {
     data,
   });
   return (
-   <table
+    <table
       {...getTableProps()}
       className="table-auto text-sm border-collapse w-full border-t-2 border-wcg_navy/70"
     >

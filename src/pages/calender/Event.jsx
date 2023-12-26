@@ -14,7 +14,6 @@ const getTime = (dateString) => {
 };
 
 const Event = ({ showEvent }) => {
-
   const birthdayColumns = useMemo(
     () => [
       {
@@ -40,7 +39,7 @@ const Event = ({ showEvent }) => {
         ),
       },
     ],
-    []
+    [],
   );
   const leavesColumns = useMemo(
     () => [
@@ -59,7 +58,7 @@ const Event = ({ showEvent }) => {
                   {cellInfo?.row?.original?.title}
                 </span>
                 <span className="flex gap-1 text-xs text-wcg_navy/70">
-                 Day: <span>{cellInfo?.row?.original?.startDate}</span>
+                  Day: <span>{cellInfo?.row?.original?.startDate}</span>
                   <span>to</span>
                   <span>{cellInfo?.row?.original?.endDate}</span>
                 </span>
@@ -69,7 +68,7 @@ const Event = ({ showEvent }) => {
         ),
       },
     ],
-    []
+    [],
   );
   const meetingColumns = useMemo(
     () => [
@@ -88,7 +87,7 @@ const Event = ({ showEvent }) => {
                   {cellInfo?.row?.original?.title}
                 </span>
                 <span className="flex gap-1 text-xs text-wcg_navy/70">
-                 Time : <span>{cellInfo?.row?.original?.startTime}</span>
+                  Time : <span>{cellInfo?.row?.original?.startTime}</span>
                   <span>to</span>
                   <span>{cellInfo?.row?.original?.endTime}</span>
                 </span>
@@ -98,7 +97,7 @@ const Event = ({ showEvent }) => {
         ),
       },
     ],
-    []
+    [],
   );
 
   const formattedData = showEvent.map((event) => {
@@ -155,7 +154,9 @@ const Event = ({ showEvent }) => {
       </div>
     </div>
   ) : (
-    <div className="  shadow-xl shadow-wcg_navy/20 p-5 block h-fit w-11/12 rounded-lg bg-blue-50 text-center ">No Event  </div>
+    <div className="  shadow-xl shadow-wcg_navy/20 p-5 block h-fit w-11/12 rounded-lg bg-blue-50 text-center ">
+      No Event{" "}
+    </div>
   );
 };
 

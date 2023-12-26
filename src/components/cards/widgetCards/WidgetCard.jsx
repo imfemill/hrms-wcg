@@ -36,11 +36,7 @@ const WidgetCard = ({ widget }) => {
           className="cursor-pointer flex items-center"
           onClick={() => toggleAccordion()}
         >
-          <img
-            src={openCloseIcon}
-            alt="icon"
-            className={`h-5 w-5 ${rotate}`}
-          />
+          <img src={openCloseIcon} alt="icon" className={`h-5 w-5 ${rotate}`} />
         </div>
       </div>
       <div className="flex gap-3 justify-between w-full p-5">

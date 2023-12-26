@@ -29,7 +29,6 @@ const LeaveCard = ({ leaves }) => {
               </span>
             </span>
           </div>
-         
         ),
       },
     ],

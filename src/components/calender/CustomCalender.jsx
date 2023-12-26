@@ -10,32 +10,31 @@ const CustomCalender = ({ currentDate, setCurrentDate, setShowEvent }) => {
   const handleNavigate = (action) => {
     // action can be 'PREV', 'NEXT', or 'TODAY'
     let newDate;
-console.log("Before==>>",moment(currentDate));
-switch (action) {
-  case "PREV":
-    newDate = moment(currentDate).subtract(1, "month").toDate();
-    break;
-    case "TODAY":
-      newDate = new Date();
-      break;
+    console.log("Before==>>", moment(currentDate));
+    switch (action) {
+      case "PREV":
+        newDate = moment(currentDate).subtract(1, "month").toDate();
+        break;
+      case "TODAY":
+        newDate = new Date();
+        break;
       case "NEXT":
         newDate = moment(currentDate).add(1, "month").toDate();
         break;
-        case "Day":
+      case "Day":
         newDate = moment(currentDate).add(1, "month").toDate();
         break;
-        default:
-          newDate = currentDate;
-        }
-        
-        console.log("After==>>",newDate);
-    setCurrentDate(newDate);
+      default:
+        newDate = currentDate;
+    }
 
+    console.log("After==>>", newDate);
+    setCurrentDate(newDate);
   };
 
   useEffect(() => {
     const selectedDay = moment(currentDate).format("YYYY-MM-DD");
-    setCurrentDate( currentDate);
+    setCurrentDate(currentDate);
     // Check if there are any events on the selected day
     const eventsOnSelectedDay = events.filter(
       (event) =>
@@ -48,12 +47,12 @@ switch (action) {
     } else {
       setShowEvent([]);
     }
-  }, [currentDate])
-  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentDate]);
 
   const handleSelectSlot = (slotInfo) => {
     const selectedDay = moment(slotInfo.start).format("YYYY-MM-DD");
-    setCurrentDate( slotInfo.start);
+    setCurrentDate(slotInfo.start);
     // Check if there are any events on the selected day
     const eventsOnSelectedDay = events.filter(
       (event) =>
@@ -78,7 +77,6 @@ switch (action) {
         step={60}
         localizer={localizer}
         date={currentDate} // Update this line
-       
         // popup={false}
         onSelectSlot={handleSelectSlot}
         onShowMore={(events) => this.setState({ showModal: true, events })}
