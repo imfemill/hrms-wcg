@@ -1,11 +1,14 @@
 .rbc-header {
-  background: #eaf3fa;
+  /* background: #eaf3fa; */
   color: black;
   padding: 10px;
-  font-size: 12px;
+  font-size: 16px;
   border: none !important;
+  border-bottom: 1px solid #205375;
 }
-
+.rbc-month-header {
+  border-bottom: 1px solid #205375;
+}
 .rbc-event {
   /* padding: 0px !important; */
   /* border-radius: 0px !important; */
@@ -19,6 +22,10 @@
   border-radius: 0px !important;
   border: none !important;
   background-color: transparent !important;
+}
+
+.rbc-row-bg {
+  border-bottom: 1px solid #205375;
 }
 
 .rbc-time-slot {
@@ -45,6 +52,7 @@
 
 .rbc-month-row {
   border: none !important;
+  max-height: 200px;
 }
 
 .rbc-button-link {
@@ -76,8 +84,17 @@
 
   border-radius: 100%;
 }
-
 .rbc-current {
   color: brown;
   font-weight: 600;
+}
+
+.rbc-row-segment {
+  pointer-events: none;
+}
+
+.rbc-row-segment {
+  /* display: none; */
+  height: 10px;
+  font-size: 0px;
 }

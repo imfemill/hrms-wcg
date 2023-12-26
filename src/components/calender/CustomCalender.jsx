@@ -4,13 +4,13 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import CustomToolbar from "./CustomToolbar";
 import "./calender.css";
 import events from "./events";
+import { useEffect } from "react";
 const localizer = momentLocalizer(moment);
 const CustomCalender = ({ currentDate, setCurrentDate, setShowEvent }) => {
   const handleNavigate = (action) => {
     // action can be 'PREV', 'NEXT', or 'TODAY'
-    console.log(action);
     let newDate;
-
+    console.log("Before==>>", moment(currentDate));
     switch (action) {
       case "PREV":
         newDate = moment(currentDate).subtract(1, "month").toDate();
@@ -21,17 +21,20 @@ const CustomCalender = ({ currentDate, setCurrentDate, setShowEvent }) => {
       case "NEXT":
         newDate = moment(currentDate).add(1, "month").toDate();
         break;
+      case "Day":
+        newDate = moment(currentDate).add(1, "month").toDate();
+        break;
       default:
         newDate = currentDate;
     }
 
+    console.log("After==>>", newDate);
     setCurrentDate(newDate);
-    console.log(currentDate);
   };
 
-  const handleSelectSlot = (slotInfo) => {
-    const selectedDay = moment(slotInfo.start).format("YYYY-MM-DD");
-
+  useEffect(() => {
+    const selectedDay = moment(currentDate).format("YYYY-MM-DD");
+    setCurrentDate(currentDate);
     // Check if there are any events on the selected day
     const eventsOnSelectedDay = events.filter(
       (event) =>
@@ -40,15 +43,32 @@ const CustomCalender = ({ currentDate, setCurrentDate, setShowEvent }) => {
     );
 
     if (eventsOnSelectedDay.length > 0) {
-      console.log("Events on selected day:", eventsOnSelectedDay);
       setShowEvent(eventsOnSelectedDay);
     } else {
-      console.log("No events on selected day");
+      setShowEvent([]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentDate]);
+
+  const handleSelectSlot = (slotInfo) => {
+    const selectedDay = moment(slotInfo.start).format("YYYY-MM-DD");
+    setCurrentDate(slotInfo.start);
+    // Check if there are any events on the selected day
+    const eventsOnSelectedDay = events.filter(
+      (event) =>
+        moment(event.start).format("YYYY-MM-DD") === selectedDay ||
+        moment(event.end).format("YYYY-MM-DD") === selectedDay,
+    );
+
+    if (eventsOnSelectedDay.length > 0) {
+      setShowEvent(eventsOnSelectedDay);
+    } else {
+      setShowEvent([]);
     }
   };
 
   return (
-    <div className="h-[500px] w-9/10  p-10 ">
+    <div className="h-[500px] max-h-[600px] w-9/10">
       <Calendar
         events={events}
         views={{
