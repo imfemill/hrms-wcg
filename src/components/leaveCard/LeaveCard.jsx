@@ -1,20 +1,14 @@
 export default function LeaveCard({ title, takenLeave, allowedLeave }) {
   return (
-    <div className="flex flex-col bg-blue-50 w-full rounded-lg p-6 text-center drop-shadow-lg">
+    <div className="flex flex-col bg-gradient-to-t from-blue-50 to-white w-full rounded-lg p-6 text-center border-wcg_blue border-b-2 shadow-xl">
       <span className="text-gray-800 text-xl font-semibold">{title}</span>
       <div className="flex justify-center">
-        <div className="w-24 border-b-4 border-wcg_orange pb-2" />
+        <div className="w-40 border-b-2 border-wcg_orange pb-1" />
       </div>
-      <span className="mt-4 text-xl font-semibold">
-        <label className="bg-blue-100 rounded p-1.5 px-3">
-          Taken : {takenLeave}
-        </label>
-      </span>
-      <span className="text-green-500 mt-3">
-        <label className="bg-green-100 rounded p-1.5 px-3">
-          Allowed : {allowedLeave}
-        </label>
-      </span>
+      <label className="text-2xl font-medium mt-4">Taken : {takenLeave}</label>
+      <label className="text-green-600 font-medium mt-4">
+        Allowed : {allowedLeave}
+      </label>
     </div>
   );
 }

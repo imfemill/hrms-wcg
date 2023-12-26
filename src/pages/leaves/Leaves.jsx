@@ -1,11 +1,116 @@
+import { useMemo } from "react";
 import Button from "../../components/button/button";
 import LeaveCard from "../../components/leaveCard/LeaveCard";
-import Select from "../../components/select/Select";
 import CustomTable from "../../components/table/CustomTable";
 
 const Leaves = () => {
-  const leaveType = ["Casual", "Medical"];
-  const leaveStatus = ["Requested", "Approved", "Rejected"];
+  const data = useMemo(
+    () => [
+      {
+        applicantName: "Jatin",
+        leaveType: "Casual",
+        leaveDays: 1,
+        leavetSatus: "Approved",
+        leaveStart: "10-11-2023",
+        leaveEnd: "17-11-2023",
+        Action: "",
+      },
+      {
+        applicantName: "Femil",
+        leaveType: "Casual",
+        leaveDays: 1,
+        leavetSatus: "Approved",
+        leaveStart: "10-11-2023",
+        leaveEnd: "10-11-2023",
+        Action: "",
+      },
+      {
+        applicantName: "Yash",
+        leaveType: "Medical",
+        leaveDays: 1,
+        leavetSatus: "Approved",
+        leaveStart: "10-11-2023",
+        leaveEnd: "10-11-2023",
+        Action: "",
+      },
+      {
+        applicantName: "Kishan",
+        leaveType: "Medical",
+        leaveDays: 1,
+        leavetSatus: "Approved",
+        leaveStart: "26-12-2023",
+        leaveEnd: "26-12-2023",
+        Action: "",
+      },
+      {
+        applicantName: "Milan",
+        leaveType: "Medical",
+        leaveDays: 1,
+        leavetSatus: "Approved",
+        leaveStart: "10-11-2023",
+        leaveEnd: "10-11-2023",
+        Action: "",
+      },
+      {
+        applicantName: "Krunal",
+        leaveType: "Medical",
+        leaveDays: 1,
+        leavetSatus: "Approved",
+        leaveStart: "10-11-2023",
+        leaveEnd: "10-11-2023",
+        Action: "",
+      },
+      {
+        applicantName: "Vipul",
+        leaveType: "Medical",
+        leaveDays: 1,
+        leavetSatus: "Approved",
+        leaveStart: "9-11-2023",
+        leaveEnd: "9-11-2023",
+        Action: "",
+      },
+    ],
+    [],
+  );
+
+  const columns = useMemo(
+    () => [
+      {
+        Header: "Applicant Name",
+        accessor: "applicantName",
+        disableSortBy: true,
+        disableglobalfilter: true,
+      },
+      {
+        Header: "Leave Type",
+        accessor: "leaveType",
+        disableglobalfilter: true,
+      },
+      {
+        Header: "Leave Days",
+        accessor: "leaveDays",
+        disableSortBy: true,
+        disableglobalfilter: true,
+      },
+      {
+        Header: "Leave Status",
+        accessor: "leavetSatus",
+        disableglobalfilter: true,
+      },
+      {
+        Header: "Leave Start",
+        accessor: "leaveStart",
+      },
+      { Header: "Leave End", accessor: "leaveEnd" },
+      {
+        Header: "Action",
+        accessor: "",
+        disableSortBy: true,
+        disableglobalfilter: true,
+      },
+    ],
+    [],
+  );
 
   return (
     <>
@@ -31,21 +136,15 @@ const Leaves = () => {
           allowedLeave={4}
         />
       </div>
-      <div className="p-2 mt-8 bg-blue-50 rounded-lg drop-shadow-lg">
+      <div className="p-2 mt-8  rounded-lg drop-shadow-lg">
         <div className="flex justify-between m-2">
           <div className="text-2xl font-semibold">
             Leave List
-            <div className="w-18 border-b-4 border-wcg_orange pb-2" />
+            <div className="w-18 border-b-2 border-wcg_orange pb-1" />
           </div>
           <Button lable={"Add Leave"} />
         </div>
-        <div className="w-full flex justify-around  gap-6 my-6">
-          <Select options={leaveType} />
-          <Select options={leaveStatus} />
-          <Button lable={"Search"} />
-          <Button lable={"Reset"} />
-        </div>
-        <CustomTable />
+        <CustomTable columns={columns} data={data} />
       </div>
     </>
   );
