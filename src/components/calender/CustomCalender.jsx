@@ -47,7 +47,7 @@ const CustomCalender = ({ currentDate, setCurrentDate, setShowEvent }) => {
     } else {
       setShowEvent([]);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentDate]);
 
   const handleSelectSlot = (slotInfo) => {
