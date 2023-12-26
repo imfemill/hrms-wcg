@@ -29,22 +29,9 @@ const LeaveCard = ({ leaves }) => {
               </span>
             </span>
           </div>
-          // <span className="flex justify-center items-center  gap-2">
-          //   <Avatar name={cellInfo?.row?.original?.name} className={"lg:px-2"} />
-          //   <span className="text-base text-start text-wcg_navy w-10.5/12">
-          //     {cellInfo?.row?.original?.name}
-          //   </span>
-          // </span>
+         
         ),
       },
-      // {
-      //   header: "",
-      //   accessor: "from",
-      // },
-      // {
-      //   header: "",
-      //   accessor: "to",
-      // },
     ],
     [],
   );

@@ -38,7 +38,7 @@ const WidgetCard = ({ widget }) => {
         >
           <img
             src={openCloseIcon}
-            alt="leaves"
+            alt="icon"
             className={`h-5 w-5 ${rotate}`}
           />
         </div>

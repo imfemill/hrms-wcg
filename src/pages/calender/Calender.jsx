@@ -8,22 +8,25 @@ const Calender = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [showEvent, setShowEvent] = useState([]);
   return (
-    <div className="flex justify-evenly p-10  ">
+    <div className="flex justify-evenly h-full  ">
       <div>
         <VerticalCarousel
           currentDate={currentDate}
           setCurrentDate={setCurrentDate}
         />
       </div>
-      <div>
+      <div className="flex flex-col">
         {" "}
         <CustomCalender
           currentDate={currentDate}
           setCurrentDate={setCurrentDate}
           setShowEvent={setShowEvent}
         />{" "}
+        {/* <div className="bg-wcg_orange h-9">
+
+        </div> */}
       </div>
-      <div className="w-[300px] bor">
+      <div className="w-[500px] ">
         {" "}
         <Event showEvent={showEvent} />{" "}
       </div>

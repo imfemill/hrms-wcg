@@ -1,3 +1,5 @@
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+
 const CustomToolbar = ({ date, onNavigate }) => {
   const handleNavigate = (action) => {
     onNavigate(action);
@@ -8,24 +10,23 @@ const CustomToolbar = ({ date, onNavigate }) => {
   // };
 
   return (
-    <div className="custom-toolbar">
-      <div>
-        <button onClick={() => handleNavigate("PREV")}>Previous</button>
-        <button onClick={() => handleNavigate("TODAY")}>Today</button>
-        <button onClick={() => handleNavigate("NEXT")}>Next</button>
-      </div>
-      <div>
-        <label>View:</label>
-        {/* <select value={view} onChange={(e) => handleViewChange(e.target.value)}>
-          <option value="month">Month</option>
-          <option value="week">Week</option>
-          <option value="day">Day</option>
-        </select> */}
-      </div>
-      <div>
-        <span>{date.toLocaleDateString()}</span>
-      </div>
+    <div className="custom-toolbar flex justify-between items-center p-3 rounded-md">
+    <div>
+      <span className="text-lg font-semibold">{date.toLocaleDateString()}</span>
     </div>
+    <div className="flex items-center space-x-2">
+      <button onClick={() => handleNavigate("PREV")} className="text-wcg_blue hover:text-wcg_navy">
+        <ChevronLeftIcon className="h-5 w-5" />
+      </button>
+      <button onClick={() => handleNavigate("TODAY")} className="px-3 py-1 hover:bg-wcg_powderBlue rounded-md">
+        Today
+      </button>
+      <button onClick={() => handleNavigate("NEXT")} className="text-wcg_blue hover:text-wcg_navy">
+        <ChevronRightIcon className="h-5 w-5" />
+      </button>
+    </div>
+  </div>
+  
   );
 };
 
